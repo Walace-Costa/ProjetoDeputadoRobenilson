@@ -55,27 +55,27 @@ export default function Contato() {
   };
 
   return (
-    <section id="contato" ref={ref} style={{ background: '#080e1a', padding: '100px clamp(1rem,4vw,3rem)', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle,rgba(230,59,46,0.03) 1px,transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
+    <section id="contato" ref={ref} style={{ background: 'var(--cream)', padding: '100px clamp(1rem,4vw,3rem)', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle,rgba(16,10,98,0.04) 1px,transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
       <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 40 : 80 }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(230,59,46,0.08)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(219,0,44,0.08)', border: '1px solid rgba(219,0,44,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
               <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)', animation: 'pulseRed 2s infinite' }} />
               <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Participe</span>
             </div>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 20 }}>Faça parte dessa mudança</h2>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 15, lineHeight: 1.8, marginBottom: 36 }}>Cada apoio conta. Compartilhe, indique e converse com seus vizinhos sobre o trabalho do Dr. Robenilson.</p>
+            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2, marginBottom: 20 }}>Faça parte dessa mudança</h2>
+            <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 15, lineHeight: 1.8, marginBottom: 36 }}>Cada apoio conta. Compartilhe, indique e converse com seus vizinhos sobre o trabalho do Dr. Robenilson.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
                 { Icon: WhatsappIcon, label: 'WhatsApp', val: 'Entre no canal oficial', color: '#25D366', href: WHATSAPP_LINK },
                 { Icon: InstagramIcon, label: 'Instagram', val: '@robenilson.torres.adv', color: '#E1306C', href: INSTAGRAM_LINK },
-                { Icon: MailIcon, label: 'E-mail', val: 'contato@robenilsontorres.com.br', color: '#1A56DB', href: 'mailto:contato@robenilsontorres.com.br' },
+                { Icon: MailIcon, label: 'E-mail', val: 'contato@robenilsontorres.com.br', color: '#100a62', href: 'mailto:contato@robenilsontorres.com.br' },
               ].map(c => (
                 <motion.a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer" whileHover={{ x: 6, borderColor: c.color }}
-                  style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, cursor: 'pointer', transition: 'border-color 0.2s', background: 'rgba(255,255,255,0.02)', textDecoration: 'none' }}>
+                  style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 10, cursor: 'pointer', transition: 'border-color 0.2s', background: '#ffffff', textDecoration: 'none' }}>
                   <c.Icon width={22} height={22} style={{ color: c.color, flexShrink: 0 }} />
-                  <div><div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginBottom: 2 }}>{c.label}</div><div style={{ fontSize: 14, fontWeight: 500, color: '#fff' }}>{c.val}</div></div>
+                  <div><div style={{ fontSize: 11, color: 'rgba(16,10,98,0.5)', marginBottom: 2 }}>{c.label}</div><div style={{ fontSize: 14, fontWeight: 500, color: 'var(--navy)' }}>{c.val}</div></div>
                 </motion.a>
               ))}
             </div>
