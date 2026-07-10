@@ -76,12 +76,12 @@ export default function Navbar() {
             <div style={{ display: 'flex', flexDirection: 'column', padding: '8px clamp(1rem,4vw,3rem) 28px', gap: 2 }}>
               {links.map(l => (
                 <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
-                  style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                  style={{ color: 'rgba(16,10,98,0.75)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(16,10,98,0.08)' }}>
                   {l.label}
                 </a>
               ))}
               <a href="#contato" onClick={() => setMenuOpen(false)}
-                style={{ marginTop: 18, textAlign: 'center', background: 'linear-gradient(135deg,var(--red),#c0392b)', color: '#fff', padding: '13px 22px', borderRadius: 7, fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>
+                style={{ marginTop: 18, textAlign: 'center', background: 'var(--gold)', color: 'var(--navy)', padding: '13px 22px', borderRadius: 7, fontSize: 14, fontWeight: 700, textDecoration: 'none' }}>
                 #BoraPraALBA
               </a>
             </div>
