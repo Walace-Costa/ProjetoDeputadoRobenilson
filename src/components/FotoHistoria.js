@@ -44,14 +44,14 @@ function Card({ m, i }) {
         <div style={{ position:'absolute', top:0, bottom:0, [isEven?'right':'left']:0, width:3, background:`linear-gradient(to bottom,transparent,${m.accent},transparent)` }} />
       </div>
       <motion.div initial={{ opacity:0, x:isEven?40:-40 }} animate={inView?{opacity:1,x:0}:{}} transition={{ duration:0.7, delay:0.2 }}
-        style={{ order:textOrder, background:'var(--bg)', display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(2rem,5vw,5rem)', borderBottom:'1px solid rgba(16,10,98,0.07)' }}>
-        <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:24 }}>
+        style={{ order:textOrder, background:'var(--bg)', display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(1.5rem,4vw,3.5rem)', borderBottom:'1px solid rgba(16,10,98,0.07)' }}>
+        <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:18 }}>
           <div style={{ height:2, width:40, background:m.accent, borderRadius:1 }} />
           <span style={{ fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:m.accent }}>{m.ano}</span>
         </div>
-        <h3 style={{ fontFamily:'var(--serif)', fontSize:'clamp(1.8rem,3vw,2.4rem)', fontWeight:700, color:'var(--navy)', lineHeight:1.2, marginBottom:20 }}>{m.titulo}</h3>
-        <p style={{ color:'rgba(16,10,98,0.65)', fontSize:15, lineHeight:1.85 }}>{m.texto}</p>
-        <div style={{ marginTop:28, display:'flex', alignItems:'center', gap:8 }}>
+        <h3 style={{ fontFamily:'var(--serif)', fontSize:'clamp(1.6rem,2.6vw,2.1rem)', fontWeight:700, color:'var(--navy)', lineHeight:1.2, marginBottom:16 }}>{m.titulo}</h3>
+        <p style={{ color:'rgba(16,10,98,0.65)', fontSize:14, lineHeight:1.75 }}>{m.texto}</p>
+        <div style={{ marginTop:20, display:'flex', alignItems:'center', gap:8 }}>
           <span style={{ fontSize:12, color:'rgba(16,10,98,0.35)' }}>↩ Clique em "Ver cartoon" para alternar</span>
         </div>
       </motion.div>
