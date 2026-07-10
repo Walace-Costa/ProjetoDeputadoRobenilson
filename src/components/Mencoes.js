@@ -117,13 +117,13 @@ export default function Mencoes() {
       {/* Contador */}
       <motion.div initial={{ opacity:0 }} animate={inView?{opacity:1}:{}} transition={{ delay:0.5 }}
         style={{ textAlign:'center', marginTop:44, padding:'0 clamp(1rem,4vw,3rem)' }}>
-        <div style={{ display:'inline-flex', flexWrap:'wrap', justifyContent:'center', alignItems:'center', gap:12, background:'rgba(16,185,89,0.06)', border:'1px solid rgba(16,185,89,0.15)', borderRadius:12, padding:'12px 28px' }}>
-          <span style={{ fontFamily:'var(--serif)', fontSize:32, fontWeight:700, color:'#10B959' }}>{mencoes.length}+</span>
-          <span style={{ color:'rgba(255,255,255,0.4)', fontSize:14 }}>matérias e menções na imprensa regional e nacional</span>
+        <div style={{ display:'inline-flex', flexWrap:'wrap', justifyContent:'center', alignItems:'center', gap:12, background:'rgba(255,222,0,0.08)', border:'1px solid rgba(255,222,0,0.25)', borderRadius:12, padding:'12px 28px' }}>
+          <span style={{ fontFamily:'var(--serif)', fontSize:32, fontWeight:700, color:'#ffde00' }}>{mencoes.length}+</span>
+          <span style={{ color:'rgba(255,255,255,0.55)', fontSize:14 }}>matérias e menções na imprensa regional e nacional</span>
         </div>
       </motion.div>
 
-      <style>{`@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(16,185,89,0.35)}50%{box-shadow:0 0 0 9px rgba(16,185,89,0)}}`}</style>
+      <style>{`@keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(255,222,0,0.35)}50%{box-shadow:0 0 0 9px rgba(255,222,0,0)}}`}</style>
     </section>
   );
 }
