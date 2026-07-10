@@ -13,7 +13,7 @@ const materias = [
     url: 'https://blogdoere.com.br/?p=29484',
     destaque: true,
     tag: 'Destaque nacional',
-    tagColor: '#E63B2E',
+    tagColor: '#db002c',
     img: 'https://blogdoere.com.br/wp-content/uploads/2026/02/1000227070.jpg',
   },
   {
