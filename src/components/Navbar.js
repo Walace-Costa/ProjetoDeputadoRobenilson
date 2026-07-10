@@ -52,7 +52,7 @@ export default function Navbar() {
           <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
             {links.map(l => (
               <motion.a key={l.href} href={l.href} whileHover={{ color: 'var(--red)' }}
-                style={{ color: 'rgba(16,10,98,0.7)', textDecoration: 'none', fontSize: 13 }}>
+                style={{ color: 'rgba(16,10,98,0.92)', textDecoration: 'none', fontSize: 13 }}>
                 {l.label}
               </motion.a>
             ))}
