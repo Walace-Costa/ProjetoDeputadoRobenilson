@@ -11,9 +11,9 @@ export default function Advocacia() {
   const isMobile = useMediaQuery('(max-width: 640px)');
   const isTablet = useMediaQuery('(max-width: 960px)');
   return (
-    <section id="advocacia" ref={ref} style={{ background: 'var(--bg)', padding: '100px clamp(1rem,4vw,3rem)' }}>
+    <section id="advocacia" ref={ref} style={{ background: 'var(--bg)', padding: '60px clamp(1rem,4vw,3rem)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} style={{ maxWidth: 600, marginBottom: 64 }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} style={{ maxWidth: 600, marginBottom: 40 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(219,0,44,0.08)', border: '1px solid rgba(219,0,44,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
             <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)' }} />
             <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Atuação profissional</span>
@@ -22,18 +22,18 @@ export default function Advocacia() {
             Uma vida dedicada à proteção dos mais vulneráveis
           </h2>
           <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 15, lineHeight: 1.8 }}>
-            Professor, conselheiro tutelar, gestor social, advogado e presidente da ACTEBA. Cada cargo ocupado com o mesmo propósito: garantir direitos a quem mais precisa.
+            Professor, conselheiro tutelar, gestor social e advogado. Cada cargo ocupado com o mesmo propósito: garantir direitos a quem mais precisa.
           </p>
         </motion.div>
-        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2,1fr)' : 'repeat(3,1fr)', gap: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2,1fr)' : 'repeat(3,1fr)', gap: 20 }}>
           {areas.map((a, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: i * 0.15 }} whileHover={{ y: -8, boxShadow: `0 20px 60px ${a.glow}` }}
-              style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 16, padding: '36px 28px', cursor: 'default', position: 'relative', overflow: 'hidden', boxShadow: '0 4px 18px rgba(16,10,98,0.06)' }}>
+              style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 16, padding: '22px 20px', cursor: 'default', position: 'relative', overflow: 'hidden', boxShadow: '0 4px 18px rgba(16,10,98,0.06)' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,transparent,${a.color},transparent)` }} />
-              <div style={{ fontSize: 36, marginBottom: 20 }}>{a.icon}</div>
-              <div style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: a.color, lineHeight: 1, marginBottom: 8 }}>{a.num}</div>
-              <h3 style={{ color: 'var(--navy)', fontSize: 18, fontWeight: 600, marginBottom: 12, fontFamily: 'var(--serif)' }}>{a.area}</h3>
-              <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 14, lineHeight: 1.7 }}>{a.desc}</p>
+              <div style={{ fontSize: 30, marginBottom: 14 }}>{a.icon}</div>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: 28, fontWeight: 700, color: a.color, lineHeight: 1, marginBottom: 6 }}>{a.num}</div>
+              <h3 style={{ color: 'var(--navy)', fontSize: 17, fontWeight: 600, marginBottom: 8, fontFamily: 'var(--serif)' }}>{a.area}</h3>
+              <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 13, lineHeight: 1.6, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{a.desc}</p>
             </motion.div>
           ))}
         </div>
