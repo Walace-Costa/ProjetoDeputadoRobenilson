@@ -51,10 +51,10 @@ export default function Hero() {
   return (
     <section style={{ minHeight:'100vh', background:'var(--dark)', display:'flex', alignItems:'center', position:'relative', overflow:'hidden' }}>
       <Particles />
-      <div style={{ position:'absolute', inset:0, zIndex:0, pointerEvents:'none', backgroundImage:'linear-gradient(rgba(230,59,46,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(230,59,46,0.04) 1px,transparent 1px)', backgroundSize:'60px 60px', transform:`translateY(${offsetY*0.12}px)` }} />
-      <div style={{ position:'absolute', top:'-10%', left:'-5%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(230,59,46,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', bottom:'-10%', right:'-5%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(26,86,219,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', left:0, right:0, height:2, zIndex:1, pointerEvents:'none', background:'linear-gradient(90deg,transparent,rgba(230,59,46,0.3),transparent)', animation:'scanline 6s linear infinite' }} />
+      <div style={{ position:'absolute', inset:0, zIndex:0, pointerEvents:'none', backgroundImage:'linear-gradient(rgba(16,10,98,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(16,10,98,0.04) 1px,transparent 1px)', backgroundSize:'60px 60px', transform:`translateY(${offsetY*0.12}px)` }} />
+      <div style={{ position:'absolute', top:'-10%', left:'-5%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(219,0,44,0.08) 0%,transparent 65%)', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', bottom:'-10%', right:'-5%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.15) 0%,transparent 65%)', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', left:0, right:0, height:2, zIndex:1, pointerEvents:'none', background:'linear-gradient(90deg,transparent,rgba(219,0,44,0.3),transparent)', animation:'scanline 6s linear infinite' }} />
 
       <div style={{ maxWidth:1200, margin:'0 auto', width:'100%', position:'relative', zIndex:2, padding: isMobile ? '110px clamp(1rem,4vw,3rem) 60px' : '120px clamp(1rem,4vw,3rem) 80px', display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 48 : 80, alignItems:'center' }}>
         <div>
