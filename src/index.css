@@ -7,18 +7,20 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --red: #E63B2E; --red-glow: rgba(230,59,46,0.3);
-  --blue: #1A56DB; --blue-glow: rgba(26,86,219,0.3);
-  --gold: #F5A623;
-  --white: #FFFFFF; --dark: #080E1A; --dark2: #0D1626;
-  --gray: rgba(255,255,255,0.5);
+  --navy: #100a62; --navy-rgb: 16,10,98; --navy-glow: rgba(16,10,98,0.18);
+  --red: #db002c; --red-rgb: 219,0,44; --red-glow: rgba(219,0,44,0.3);
+  --green: #176939; --green-rgb: 23,105,57; --green-glow: rgba(23,105,57,0.25);
+  --gold: #ffde00; --gold-rgb: 255,222,0; --gold-glow: rgba(255,222,0,0.4);
+  --cream: #fff4d4; --cream-rgb: 255,244,212;
+  --white: #FFFFFF; --bg: #fffdf5; --dark: #fffdf5; --dark2: #fff4d4;
+  --muted: rgba(16,10,98,0.6);
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
 }
 html { scroll-behavior: smooth; }
-body { font-family: var(--sans); background: var(--dark); color: #fff; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-::selection { background: var(--red); color: #fff; }
-@keyframes pulseRed { 0%,100%{box-shadow:0 0 0 0 var(--red-glow)} 50%{box-shadow:0 0 0 14px rgba(230,59,46,0)} }
+body { font-family: var(--sans); background: var(--bg); color: var(--navy); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: var(--gold); color: var(--navy); }
+@keyframes pulseRed { 0%,100%{box-shadow:0 0 0 0 var(--red-glow)} 50%{box-shadow:0 0 0 14px rgba(219,0,44,0)} }
 @keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
 @keyframes scanline { 0%{transform:translateY(-100%)} 100%{transform:translateY(100vh)} }
 @keyframes rotateRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
