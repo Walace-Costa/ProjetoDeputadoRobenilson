@@ -27,7 +27,7 @@ function Particles() {
       });
       for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
         const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, d = Math.sqrt(dx*dx+dy*dy);
-        if (d < 110) { ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y); ctx.strokeStyle=`rgba(230,59,46,${0.07*(1-d/110)})`; ctx.lineWidth=0.5; ctx.stroke(); }
+        if (d < 110) { ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y); ctx.strokeStyle=`rgba(16,10,98,${0.06*(1-d/110)})`; ctx.lineWidth=0.5; ctx.stroke(); }
       }
       raf = requestAnimationFrame(draw);
     };
