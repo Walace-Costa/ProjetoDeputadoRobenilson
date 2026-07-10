@@ -12,7 +12,7 @@
   --green: #176939; --green-rgb: 23,105,57; --green-glow: rgba(23,105,57,0.25);
   --gold: #ffde00; --gold-rgb: 255,222,0; --gold-glow: rgba(255,222,0,0.4);
   --cream: #EEF1FA; --cream-rgb: 238,241,250;
-  --white: #FFFFFF; --bg: #eee2c4; --dark: #eee2c4; --dark2: #EEF1FA;
+  --white: #FFFFFF; --bg: #EEF3EA; --dark: #EEF3EA; --dark2: #EEF1FA;
   --muted: rgba(16,10,98,0.6);
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
