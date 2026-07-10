@@ -67,7 +67,7 @@ export default function Hero() {
           <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.8, delay:0.4 }} style={{ position:'relative', marginBottom:24 }}>
             <h1 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2.4rem,5vw,3.8rem)', fontWeight:700, lineHeight:1.12, color:'var(--navy)' }}>
               Defensor da infância,<br />
-              <span style={{ background:'linear-gradient(90deg,var(--red),var(--gold),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>
+              <span style={{ background:'linear-gradient(90deg,#D4A017,#9C1F2E,#D4A017)', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>
                 advogado do povo,
               </span><br />
               <span style={{ color:'rgba(16,10,98,0.85)' }}>#BoraPraALBA</span>
