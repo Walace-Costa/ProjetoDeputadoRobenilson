@@ -35,11 +35,11 @@ export default function Navbar() {
       }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
         <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <div style={{ width: 42, height: 42, borderRadius: 8, background: 'linear-gradient(135deg,var(--red),var(--blue))', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulseRed 3s infinite', flexShrink: 0 }}>
+          <div style={{ width: 42, height: 42, borderRadius: 8, background: 'linear-gradient(135deg,var(--navy),var(--red))', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulseRed 3s infinite', flexShrink: 0 }}>
             <span style={{ fontFamily: 'var(--serif)', color: '#fff', fontWeight: 700, fontSize: 15 }}>RT</span>
           </div>
           <div>
-            <div style={{ color: '#fff', fontWeight: 600, fontSize: 15, lineHeight: 1.2 }}>Robenilson Torres</div>
+            <div style={{ color: 'var(--navy)', fontWeight: 600, fontSize: 15, lineHeight: 1.2 }}>Robenilson Torres</div>
             <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'linear-gradient(90deg,var(--red),var(--gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               Deputado Estadual · Bahia 2026
             </div>
