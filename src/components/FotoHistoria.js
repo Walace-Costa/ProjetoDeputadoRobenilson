@@ -30,11 +30,14 @@ function FotoToggle({ fotoReal, avatar, accent }) {
 
 function Card({ m, i }) {
   const { ref, inView } = useInView({ threshold:0.15, triggerOnce:true });
-  const isEven = i % 2 === 0;
+  const isMobile = useMediaQuery('(max-width: 860px)');
+  const isEven = !isMobile && i % 2 === 0;
+  const imgOrder = isMobile ? 0 : (isEven ? 0 : 1);
+  const textOrder = isMobile ? 1 : (isEven ? 1 : 0);
   return (
     <motion.div ref={ref} initial={{ opacity:0, y:60 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:0.7, ease:[0.22,1,0.36,1] }}
-      style={{ display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:480 }}>
-      <div style={{ order:isEven?0:1, background:'#080e1a', position:'relative', overflow:'hidden', minHeight:480 }}>
+      style={{ display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', minHeight: isMobile ? undefined : 480 }}>
+      <div style={{ order:imgOrder, background:'#080e1a', position:'relative', overflow:'hidden', minHeight: isMobile ? 320 : 480 }}>
         <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(${m.accent}08 1px,transparent 1px),linear-gradient(90deg,${m.accent}08 1px,transparent 1px)`, backgroundSize:'40px 40px', pointerEvents:'none' }} />
         <div style={{ position:'absolute', inset:0, background:`radial-gradient(circle at center,${m.accent}10 0%,transparent 65%)`, pointerEvents:'none' }} />
         <FotoToggle fotoReal={m.fotoReal} avatar={m.avatar} accent={m.accent} />
@@ -42,7 +45,7 @@ function Card({ m, i }) {
         <div style={{ position:'absolute', top:0, bottom:0, [isEven?'right':'left']:0, width:3, background:`linear-gradient(to bottom,transparent,${m.accent},transparent)` }} />
       </div>
       <motion.div initial={{ opacity:0, x:isEven?40:-40 }} animate={inView?{opacity:1,x:0}:{}} transition={{ duration:0.7, delay:0.2 }}
-        style={{ order:isEven?1:0, background:'#0a1020', display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(2rem,5vw,5rem)', borderBottom:'1px solid rgba(255,255,255,0.04)' }}>
+        style={{ order:textOrder, background:'#0a1020', display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(2rem,5vw,5rem)', borderBottom:'1px solid rgba(255,255,255,0.04)' }}>
         <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:24 }}>
           <div style={{ height:2, width:40, background:m.accent, borderRadius:1 }} />
           <span style={{ fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:m.accent }}>{m.ano}</span>
