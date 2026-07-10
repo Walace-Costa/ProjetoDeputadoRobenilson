@@ -90,7 +90,7 @@ function CardNormal({ m, i }) {
       initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: i * 0.1 }}
       whileHover={{ y: -6, borderColor: m.tagColor }}
-      style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(16,10,98,0.08)', background: 'var(--cream)', display: 'flex', flexDirection: 'column', transition: 'border-color 0.3s', position: 'relative' }}>
+      style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(16,10,98,0.08)', background: 'var(--cream)', display: 'flex', flexDirection: 'column', transition: 'border-color 0.3s', position: 'relative', boxShadow: '0 4px 18px rgba(16,10,98,0.06)' }}>
 
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${m.tagColor},transparent)` }} />
 
