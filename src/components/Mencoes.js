@@ -58,10 +58,12 @@ function Card({ m }) {
 function InfiniteRow({ items, toLeft = false, speed = 40 }) {
   const cardW = 316;
   const totalW = (items.length / 2) * cardW;
+  const isMobile = useMediaQuery('(max-width: 640px)');
+  const edgeW = isMobile ? 32 : 100;
   return (
     <div style={{ overflow:'hidden', position:'relative' }}>
-      <div style={{ position:'absolute', left:0, top:0, bottom:0, width:100, background:'linear-gradient(90deg,#021a0e,transparent)', zIndex:2, pointerEvents:'none' }} />
-      <div style={{ position:'absolute', right:0, top:0, bottom:0, width:100, background:'linear-gradient(-90deg,#021a0e,transparent)', zIndex:2, pointerEvents:'none' }} />
+      <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#021a0e,transparent)', zIndex:2, pointerEvents:'none' }} />
+      <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#021a0e,transparent)', zIndex:2, pointerEvents:'none' }} />
       <motion.div
         animate={{ x: toLeft ? [0, -totalW] : [-totalW, 0] }}
         transition={{ duration:speed, repeat:Infinity, ease:'linear', repeatType:'loop' }}
