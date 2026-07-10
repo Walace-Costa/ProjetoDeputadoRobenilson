@@ -28,7 +28,7 @@ function Card({ m }) {
       style={{ textDecoration:'none', display:'block', flexShrink:0, width:300 }}>
       <motion.div whileHover={{ y:-6, borderColor:m.tagColor, boxShadow:`0 12px 40px ${m.tagColor}30` }}
         style={{ background:'var(--cream)', border:'1px solid rgba(15,27,76,0.08)', borderRadius:14, overflow:'hidden', boxShadow:'0 6px 20px rgba(0,0,0,0.25)', transition:'border-color 0.25s, box-shadow 0.25s', height:'100%', cursor:'pointer', position:'relative' }}>
-        <div style={{ height:3, background:'linear-gradient(90deg,rgba(255,255,255,0.7),rgba(255,255,255,0.25),transparent)' }} />
+        <div style={{ height:3, background:`linear-gradient(90deg,${m.tagColor},${m.tagColor}55,transparent)` }} />
         {m.img ? (
           <div style={{ height:120, overflow:'hidden', background:'var(--cream)' }}>
             <img src={m.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.9 }} onError={e=>{e.target.parentNode.style.display='none';}} />
