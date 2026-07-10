@@ -78,14 +78,14 @@ export default function Mencoes() {
   const { ref, inView } = useInView({ threshold:0.05, triggerOnce:true });
   return (
     <section id="mencoes" ref={ref} style={{
-      background:'linear-gradient(160deg, #769D89 0%, #729182 50%, #6F897C 100%)',
+      background:'linear-gradient(160deg, #2A459A 0%, #1B316E 50%, #101B4A 100%)',
       padding:'90px 0', position:'relative', overflow:'hidden',
-      borderTop:'1px solid rgba(23,105,57,0.18)',
-      borderBottom:'1px solid rgba(23,105,57,0.18)',
+      borderTop:'1px solid rgba(16,10,98,0.25)',
+      borderBottom:'1px solid rgba(16,10,98,0.25)',
       boxShadow:'inset 0 1px 0 rgba(255,255,255,0.04), inset 0 -1px 0 rgba(0,0,0,0.15)',
     }}>
-      {/* Orbes verdes */}
-      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(23,105,57,0.35) 0%,transparent 65%)', pointerEvents:'none' }} />
+      {/* Orbes azuis */}
+      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(45,77,180,0.35) 0%,transparent 65%)', pointerEvents:'none' }} />
       <div style={{ position:'absolute', bottom:'-15%', left:'-8%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.12) 0%,transparent 65%)', pointerEvents:'none' }} />
       <div style={{ position:'absolute', inset:0, backgroundImage:'linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px)', backgroundSize:'50px 50px', pointerEvents:'none' }} />
 
