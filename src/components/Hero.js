@@ -81,12 +81,12 @@ export default function Hero() {
 
           <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6, delay:0.8 }} style={{ display:'flex', gap:14, flexWrap:'wrap' }}>
             <motion.a href="#politica" whileHover={{ scale:1.04, y:-2 }} whileTap={{ scale:0.97 }}
-              style={{ background:'linear-gradient(135deg,var(--red),#c0392b)', color:'#fff', padding:'14px 30px', borderRadius:8, fontSize:14, fontWeight:700, textDecoration:'none', boxShadow:'0 6px 30px var(--red-glow)', display:'inline-flex', alignItems:'center', gap:8 }}>
+              style={{ background:'var(--gold)', color:'var(--navy)', padding:'14px 30px', borderRadius:8, fontSize:14, fontWeight:700, textDecoration:'none', boxShadow:'0 6px 30px var(--gold-glow)', display:'inline-flex', alignItems:'center', gap:8 }}>
               Ver propostas
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </motion.a>
             <motion.a href="#foto-historia" whileHover={{ scale:1.03 }}
-              style={{ background:'transparent', color:'#fff', padding:'14px 28px', borderRadius:8, fontSize:14, textDecoration:'none', border:'1px solid rgba(255,255,255,0.15)' }}>
+              style={{ background:'transparent', color:'var(--navy)', padding:'14px 28px', borderRadius:8, fontSize:14, textDecoration:'none', border:'1px solid rgba(16,10,98,0.25)' }}>
               Conhecer a história
             </motion.a>
           </motion.div>
