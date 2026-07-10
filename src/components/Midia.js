@@ -151,7 +151,7 @@ export default function Midia() {
           </motion.div>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 20 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2,1fr)', gap: 20 }}>
           {destaque.map((m, i) => <CardDestaque key={i} m={m} />)}
           {normais.map((m, i) => <CardNormal key={i} m={m} i={i} />)}
         </div>
