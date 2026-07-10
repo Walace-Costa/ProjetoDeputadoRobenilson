@@ -133,21 +133,21 @@ export default function Midia() {
   const normais = materias.filter(m => !m.destaque);
 
   return (
-    <section id="midia" ref={ref} style={{ background: 'linear-gradient(180deg,#080e1a,#0a1220)', padding: '100px clamp(1rem,4vw,3rem)' }}>
+    <section id="midia" ref={ref} style={{ background: 'var(--bg)', padding: '100px clamp(1rem,4vw,3rem)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} style={{ marginBottom: 56, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 20 }}>
           <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(230,59,46,0.08)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(219,0,44,0.08)', border: '1px solid rgba(219,0,44,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
               <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)' }} />
               <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Na mídia</span>
             </div>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>
+            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2 }}>
               O que a imprensa<br />diz sobre ele
             </h2>
           </div>
           {/* Avatar decorativo */}
           <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
-            <img src="/avatar-terno.jpg" alt="Avatar Dr. Robenilson" style={{ width: 100, height: 120, objectFit: 'cover', objectPosition: 'top', borderRadius: 16, border: '2px solid rgba(230,59,46,0.3)', boxShadow: '0 8px 32px rgba(230,59,46,0.2)' }} />
+            <img src="/avatar-terno.jpg" alt="Avatar Dr. Robenilson" style={{ width: 100, height: 120, objectFit: 'cover', objectPosition: 'top', borderRadius: 16, border: '2px solid rgba(219,0,44,0.3)', boxShadow: '0 8px 32px rgba(219,0,44,0.15)' }} />
           </motion.div>
         </motion.div>
 
