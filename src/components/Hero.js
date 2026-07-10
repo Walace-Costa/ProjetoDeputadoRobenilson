@@ -95,24 +95,24 @@ export default function Hero() {
         {/* Foto real no cartão */}
         <motion.div initial={{ opacity:0, x:50, scale:0.95 }} animate={{ opacity:1, x:0, scale:1 }} transition={{ duration:0.9, delay:0.5 }} style={{ display:'flex', justifyContent:'center' }}>
           <motion.div animate={{ y:[0,-12,0] }} transition={{ duration:5, repeat:Infinity, ease:'easeInOut' }}
-            style={{ background:'rgba(255,255,255,0.03)', border:'1px solid rgba(230,59,46,0.25)', borderRadius:24, padding:'32px 28px', textAlign:'center', width:'100%', maxWidth:320, backdropFilter:'blur(12px)', position:'relative', overflow:'hidden' }}>
-            <div style={{ position:'absolute', top:'50%', left:'50%', width:280, height:280, marginLeft:-140, marginTop:-140, borderRadius:'50%', border:'1px solid transparent', borderTopColor:'rgba(230,59,46,0.2)', borderRightColor:'rgba(26,86,219,0.2)', animation:'rotateRing 8s linear infinite', pointerEvents:'none' }} />
+            style={{ background:'var(--cream)', border:'1px solid rgba(16,10,98,0.1)', borderRadius:24, padding:'32px 28px', textAlign:'center', width:'100%', maxWidth:320, boxShadow:'0 20px 50px rgba(16,10,98,0.1)', position:'relative', overflow:'hidden' }}>
+            <div style={{ position:'absolute', top:'50%', left:'50%', width:280, height:280, marginLeft:-140, marginTop:-140, borderRadius:'50%', border:'1px solid transparent', borderTopColor:'rgba(219,0,44,0.25)', borderRightColor:'rgba(16,10,98,0.2)', animation:'rotateRing 8s linear infinite', pointerEvents:'none' }} />
 
             {/* Foto real terno verde */}
-            <div style={{ width:160, height:190, borderRadius:14, margin:'0 auto 20px', overflow:'hidden', border:'2px solid rgba(230,59,46,0.4)', position:'relative' }}>
+            <div style={{ width:160, height:190, borderRadius:14, margin:'0 auto 20px', overflow:'hidden', border:'2px solid rgba(219,0,44,0.35)', position:'relative' }}>
               <img src="/foto-terno-verde.png" alt="Robenilson Torres" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
             </div>
 
-            <div style={{ color:'#fff', fontSize:18, fontWeight:700, marginBottom:4, fontFamily:'var(--serif)' }}>Robenilson Torres</div>
-            <div style={{ fontSize:11, letterSpacing:'0.08em', marginBottom:4, background:'linear-gradient(90deg,var(--red),var(--gold))', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>OAB/BA · Presidente ACTEBA</div>
-            <div style={{ color:'rgba(255,255,255,0.35)', fontSize:11, marginBottom:20 }}>Itabuna, Bahia</div>
+            <div style={{ color:'var(--navy)', fontSize:18, fontWeight:700, marginBottom:4, fontFamily:'var(--serif)' }}>Robenilson Torres</div>
+            <div style={{ fontSize:11, letterSpacing:'0.08em', marginBottom:4, background:'linear-gradient(90deg,var(--red),var(--green))', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>OAB/BA · Presidente ACTEBA</div>
+            <div style={{ color:'rgba(16,10,98,0.5)', fontSize:11, marginBottom:20 }}>Itabuna, Bahia</div>
 
-            <div style={{ background:'rgba(230,59,46,0.1)', border:'1px solid rgba(230,59,46,0.25)', borderRadius:10, padding:'14px 0', marginBottom:20 }}>
-              <div style={{ color:'rgba(255,255,255,0.3)', fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:8 }}>Número nas urnas</div>
-              <div style={{ fontFamily:'var(--serif)', fontSize:44, fontWeight:700, letterSpacing:8, background:'linear-gradient(90deg,var(--red),var(--gold),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>XXXX</div>
+            <div style={{ background:'rgba(255,222,0,0.18)', border:'1px solid rgba(255,222,0,0.5)', borderRadius:10, padding:'14px 0', marginBottom:20 }}>
+              <div style={{ color:'rgba(16,10,98,0.55)', fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:8 }}>Número nas urnas</div>
+              <div style={{ fontFamily:'var(--serif)', fontSize:44, fontWeight:700, letterSpacing:8, background:'linear-gradient(90deg,var(--red),var(--navy),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>XXXX</div>
             </div>
 
-            <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(230,59,46,0.15)', border:'1px solid rgba(230,59,46,0.3)', borderRadius:999, padding:'6px 14px' }}>
+            <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(219,0,44,0.12)', border:'1px solid rgba(219,0,44,0.3)', borderRadius:999, padding:'6px 14px' }}>
               <span style={{ color:'var(--red)', fontSize:12, fontWeight:700 }}>#BoraPraALBA</span>
             </div>
           </motion.div>
