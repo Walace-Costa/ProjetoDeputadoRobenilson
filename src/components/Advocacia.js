@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 const areas = [
-  { icon: '👶', area: 'Proteção da Infância', desc: 'Especialista em Proteção Integral da Criança e do Adolescente. Presidente da Comissão da OAB Itabuna dedicada à defesa dos direitos de crianças e adolescentes.', num: '15+', color: '#db002c', glow: 'rgba(219,0,44,0.2)' },
-  { icon: '⚖️', area: 'Advocacia e Cidadania', desc: 'Formado em Direito com atuação voltada para as causas sociais. Combina o conhecimento jurídico com a militância ativa em políticas públicas para a primeira infância.', num: 'OAB/BA', color: '#100a62', glow: 'rgba(16,10,98,0.15)' },
-  { icon: '🏛️', area: 'Políticas Públicas', desc: 'Representante da Bahia no 1º Seminário Nacional de Políticas Públicas para a Primeira Infância do MEC. Integrante do Fórum Colegiado Nacional de Conselheiros Tutelares.', num: 'MEC', color: '#176939', glow: 'rgba(23,105,57,0.2)' },
+  { icon: '👶', area: 'Proteção da Infância', desc: 'Especialista em Proteção Integral da Criança e do Adolescente, à frente da defesa desses direitos junto à OAB Itabuna.', num: '15+', color: '#db002c', glow: 'rgba(219,0,44,0.2)' },
+  { icon: '⚖️', area: 'Advocacia e Cidadania', desc: 'Direito a serviço das causas sociais, unindo conhecimento jurídico à militância por políticas para a primeira infância.', num: 'OAB/BA', color: '#100a62', glow: 'rgba(16,10,98,0.15)' },
+  { icon: '🏛️', area: 'Políticas Públicas', desc: 'Voz ativa no Fórum Colegiado Nacional de Conselheiros Tutelares, construindo políticas que protegem crianças em todo o país.', num: 'Nacional', color: '#176939', glow: 'rgba(23,105,57,0.2)' },
 ];
 export default function Advocacia() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
