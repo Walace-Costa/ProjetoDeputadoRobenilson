@@ -55,7 +55,7 @@ export default function Contato() {
   };
 
   return (
-    <section id="contato" ref={ref} style={{ background: 'var(--cream)', padding: '100px clamp(1rem,4vw,3rem)', position: 'relative', overflow: 'hidden' }}>
+    <section id="contato" ref={ref} style={{ background: 'var(--cream)', padding: '100px clamp(1rem,4vw,3rem)', position: 'relative', overflow: 'hidden', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.5)' }}>
       <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle,rgba(16,10,98,0.04) 1px,transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
       <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 40 : 80 }}>
