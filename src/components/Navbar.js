@@ -44,9 +44,9 @@ export default function Navbar() {
         {isMobile ? (
           <button onClick={() => setMenuOpen(v => !v)} aria-label="Abrir menu" aria-expanded={menuOpen}
             style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: 8, width: 40, height: 40 }}>
-            <span style={{ width: 22, height: 2, background: 'var(--navy)', borderRadius: 2, transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
-            <span style={{ width: 22, height: 2, background: 'var(--navy)', borderRadius: 2, transition: 'opacity 0.3s', opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ width: 22, height: 2, background: 'var(--navy)', borderRadius: 2, transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
+            <span style={{ width: 22, height: 2, background: '#fff', borderRadius: 2, transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
+            <span style={{ width: 22, height: 2, background: '#fff', borderRadius: 2, transition: 'opacity 0.3s', opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ width: 22, height: 2, background: '#fff', borderRadius: 2, transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
           </button>
         ) : (
           <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
