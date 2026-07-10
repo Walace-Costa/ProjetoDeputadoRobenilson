@@ -11,11 +11,13 @@ const propostas = [
 ];
 export default function Politica() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
+  const isMobile = useMediaQuery('(max-width: 860px)');
+  const isTablet = useMediaQuery('(max-width: 640px)');
   return (
     <section id="politica" ref={ref} style={{ background: 'linear-gradient(180deg,#0a1220,#080e1a)', padding: '100px clamp(1rem,4vw,3rem)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} style={{ position: 'sticky', top: 100 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr', gap: isMobile ? 40 : 80, alignItems: 'start' }}>
+          <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} style={{ position: isMobile ? 'static' : 'sticky', top: 100 }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(230,59,46,0.08)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
               <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)' }} />
               <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Plataforma política</span>
