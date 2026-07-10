@@ -128,6 +128,7 @@ function CardNormal({ m, i }) {
 
 export default function Midia() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
+  const isMobile = useMediaQuery('(max-width: 760px)');
   const destaque = materias.filter(m => m.destaque);
   const normais = materias.filter(m => !m.destaque);
 
