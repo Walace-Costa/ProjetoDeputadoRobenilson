@@ -94,7 +94,7 @@ export default function Mencoes() {
           style={{ textAlign:'center', marginBottom:52 }}>
           <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
             <div style={{ width:7, height:7, borderRadius:'50%', background:'var(--gold)', animation:'pulseGreen 2s infinite' }} />
-            <span style={{ color:'#BFEBCB', fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase' }}>Na imprensa & menções</span>
+            <span style={{ color:'#C7D2F5', fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase' }}>Na imprensa & menções</span>
           </div>
           <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,3.5vw,2.8rem)', fontWeight:700, color:'#FFFFFF', lineHeight:1.2, marginBottom:12 }}>
             O que a mídia diz sobre ele
