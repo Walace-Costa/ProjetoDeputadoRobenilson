@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 const WHATSAPP_LINK = 'https://whatsapp.com/channel/0029Vb8mWUh42Dcil6tpiL29';
 const INSTAGRAM_LINK = 'https://instagram.com/robenilson.torres.adv';
 
