@@ -30,7 +30,7 @@ function Card({ m }) {
         style={{ background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.07)', borderRadius:14, overflow:'hidden', transition:'border-color 0.25s, box-shadow 0.25s', height:'100%', cursor:'pointer', position:'relative' }}>
         <div style={{ height:3, background:`linear-gradient(90deg,${m.tagColor},${m.tagColor}55,transparent)` }} />
         {m.img ? (
-          <div style={{ height:120, overflow:'hidden', background:'#0a1020' }}>
+          <div style={{ height:120, overflow:'hidden', background:'#0a2e17' }}>
             <img src={m.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.65 }} onError={e=>{e.target.parentNode.style.display='none';}} />
           </div>
         ) : (
