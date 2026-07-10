@@ -78,7 +78,7 @@ export default function Mencoes() {
   const { ref, inView } = useInView({ threshold:0.05, triggerOnce:true });
   return (
     <section id="mencoes" ref={ref} style={{
-      background:'linear-gradient(160deg, #1A5C3A 0%, #14472E 50%, #0F3A24 100%)',
+      background:'linear-gradient(160deg, #769D89 0%, #729182 50%, #6F897C 100%)',
       padding:'90px 0', position:'relative', overflow:'hidden',
       borderTop:'1px solid rgba(23,105,57,0.18)',
       borderBottom:'1px solid rgba(23,105,57,0.18)',
