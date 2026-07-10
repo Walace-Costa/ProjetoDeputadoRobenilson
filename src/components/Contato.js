@@ -81,7 +81,7 @@ export default function Contato() {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.15 }}
-            style={{ background: '#fdfbf3', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 20, padding: '40px 36px', position: 'relative', overflow: 'hidden' }}>
+            style={{ background: '#EEF3EA', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 20, padding: '40px 36px', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--red),var(--navy))' }} />
             {enviado ? (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
