@@ -103,13 +103,13 @@ export default function Hero() {
               <img src="/foto-terno-verde.png" alt="Robenilson Torres" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
             </div>
 
-            <div style={{ color:'var(--navy)', fontSize:18, fontWeight:700, marginBottom:4, fontFamily:'var(--serif)' }}>Robenilson Torres</div>
-            <div style={{ fontSize:11, letterSpacing:'0.08em', marginBottom:4, background:'linear-gradient(90deg,var(--red),var(--green))', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>OAB/BA · Presidente ACTEBA</div>
-            <div style={{ color:'rgba(16,10,98,0.5)', fontSize:11, marginBottom:20 }}>Itabuna, Bahia</div>
+            <div style={{ color:'#FFFFFF', fontSize:18, fontWeight:700, marginBottom:4, fontFamily:'var(--serif)' }}>Robenilson Torres</div>
+            <div style={{ fontSize:11, letterSpacing:'0.08em', marginBottom:4, color:'#E8899B', fontWeight:600 }}>OAB/BA · Presidente ACTEBA</div>
+            <div style={{ color:'rgba(255,255,255,0.5)', fontSize:11, marginBottom:20 }}>Itabuna, Bahia</div>
 
-            <div style={{ background:'rgba(255,222,0,0.18)', border:'1px solid rgba(255,222,0,0.5)', borderRadius:10, padding:'14px 0', marginBottom:20 }}>
-              <div style={{ color:'rgba(16,10,98,0.55)', fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:8 }}>Número nas urnas</div>
-              <div style={{ fontFamily:'var(--serif)', fontSize:44, fontWeight:700, letterSpacing:8, background:'linear-gradient(90deg,var(--red),var(--navy),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>XXXX</div>
+            <div style={{ background:'rgba(212,160,23,0.15)', border:'1px solid rgba(212,160,23,0.3)', borderRadius:10, padding:'14px 0', marginBottom:20 }}>
+              <div style={{ color:'#F0CA6E', fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:8 }}>Número nas urnas</div>
+              <div style={{ fontFamily:'var(--serif)', fontSize:44, fontWeight:700, letterSpacing:8, background:'linear-gradient(90deg,var(--red),var(--gold),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>XXXX</div>
             </div>
 
             <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(219,0,44,0.12)', border:'1px solid rgba(219,0,44,0.3)', borderRadius:999, padding:'6px 14px' }}>
