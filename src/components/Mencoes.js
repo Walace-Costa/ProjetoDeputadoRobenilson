@@ -92,14 +92,14 @@ export default function Mencoes() {
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 clamp(1rem,4vw,3rem)', position:'relative', zIndex:1 }}>
         <motion.div initial={{ opacity:0, y:30 }} animate={inView?{opacity:1,y:0}:{}}
           style={{ textAlign:'center', marginBottom:52 }}>
-          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(23,105,57,0.1)', border:'1px solid rgba(23,105,57,0.3)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(45,74,43,0.1)', border:'1px solid rgba(23,105,57,0.3)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
             <div style={{ width:7, height:7, borderRadius:'50%', background:'var(--green)', animation:'pulseGreen 2s infinite' }} />
-            <span style={{ color:'var(--green)', fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase' }}>Na imprensa & menções</span>
+            <span style={{ color:'#2D4A2B', fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase' }}>Na imprensa & menções</span>
           </div>
-          <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,3.5vw,2.8rem)', fontWeight:700, color:'var(--navy)', lineHeight:1.2, marginBottom:12 }}>
+          <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,3.5vw,2.8rem)', fontWeight:700, color:'#0F1B4C', lineHeight:1.2, marginBottom:12 }}>
             O que a mídia diz sobre ele
           </h2>
-          <p style={{ color:'rgba(16,10,98,0.6)', fontSize:15, maxWidth:480, margin:'0 auto' }}>
+          <p style={{ color:'#6B6B6B', fontSize:15, maxWidth:480, margin:'0 auto' }}>
             Clique em qualquer card para ler a matéria completa.
           </p>
         </motion.div>
