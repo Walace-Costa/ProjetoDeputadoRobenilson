@@ -28,7 +28,7 @@ export default function Politica() {
             <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
               <img src="/avatar-casual.jpg" alt="" style={{ width: 120, height: 150, objectFit: 'cover', objectPosition: 'top', borderRadius: 16, border: '2px solid rgba(219,0,44,0.3)', boxShadow: '0 8px 32px rgba(219,0,44,0.15)', display: 'block', marginBottom: 24 }} />
             </motion.div>
-            <div style={{ background: 'rgba(219,0,44,0.06)', border: '1px solid rgba(219,0,44,0.2)', borderRadius: 12, padding: '20px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+            <div style={{ background: 'rgba(45,74,43,0.06)', border: '1px solid rgba(45,74,43,0.15)', borderRadius: 12, padding: '20px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
               <span style={{ fontSize: 20 }}>🔒</span>
               <div><div style={{ color: 'var(--navy)', fontSize: 14, fontWeight: 600, marginBottom: 4 }}>Mandato transparente</div><div style={{ color: 'rgba(16,10,98,0.55)', fontSize: 13, lineHeight: 1.6 }}>Todo real do mandato publicado mensalmente com nota fiscal.</div></div>
             </div>
