@@ -17,12 +17,16 @@ export default function Footer() {
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 13, lineHeight: 1.7 }}>Defensor dos direitos da infância. Presidente da ACTEBA. Candidato a Deputado Estadual para levar essa luta à ALBA.</p>
           </div>
           <div style={{ display: 'flex', gap: 56, flexWrap: 'wrap' }}>
-            {[{ titulo: 'Candidatura', items: ['História', 'Propostas', 'Apoiar'] }, { titulo: 'Atuação', items: ['ACTEBA', 'OAB Itabuna', 'Conselho Tutelar'] }, { titulo: 'Contato', items: ['WhatsApp', 'Instagram', 'E-mail'] }].map(col => (
+            {[
+              { titulo: 'Candidatura', items: [{ label: 'História', href: '#foto-historia' }, { label: 'Propostas', href: '#politica' }, { label: 'Apoiar', href: '#contato' }] },
+              { titulo: 'Atuação', items: [{ label: 'ACTEBA', href: '#advocacia' }, { label: 'OAB Itabuna', href: '#advocacia' }, { label: 'Conselho Tutelar', href: '#advocacia' }] },
+              { titulo: 'Contato', items: [{ label: 'WhatsApp', href: 'https://whatsapp.com/channel/0029Vb8mWUh42Dcil6tpiL29', external: true }, { label: 'Instagram', href: 'https://instagram.com/robenilson.torres.adv', external: true }, { label: 'E-mail', href: 'mailto:contato@robenilsontorres.com.br' }] },
+            ].map(col => (
               <div key={col.titulo}>
                 <div style={{ color: 'var(--gold)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 16 }}>{col.titulo}</div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                   {col.items.map(item => (
-                    <motion.a key={item} href="#" whileHover={{ x: 4, color: '#fff' }} style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }}>{item}</motion.a>
+                    <motion.a key={item.label} href={item.href} {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})} whileHover={{ x: 4, color: '#fff' }} style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }}>{item.label}</motion.a>
                   ))}
                 </div>
               </div>
