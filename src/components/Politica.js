@@ -14,7 +14,7 @@ export default function Politica() {
   const isMobile = useMediaQuery('(max-width: 860px)');
   const isTablet = useMediaQuery('(max-width: 640px)');
   return (
-    <section id="politica" ref={ref} style={{ background: 'var(--bg)', padding: '100px clamp(1rem,4vw,3rem)' }}>
+    <section id="politica" ref={ref} style={{ background: 'var(--bg)', padding: '60px clamp(1rem,4vw,3rem)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr', gap: isMobile ? 40 : 80, alignItems: 'start' }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} style={{ position: isMobile ? 'static' : 'sticky', top: 100 }}>
