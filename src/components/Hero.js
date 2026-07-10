@@ -51,7 +51,7 @@ export default function Hero() {
   return (
     <section style={{ minHeight:'100vh', background:'#EEF1FA', display:'flex', alignItems:'center', position:'relative', overflow:'hidden' }}>
       <Particles />
-      <div style={{ position:'absolute', inset:0, zIndex:0, pointerEvents:'none', backgroundImage:'linear-gradient(rgba(16,10,98,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(16,10,98,0.04) 1px,transparent 1px)', backgroundSize:'60px 60px', transform:`translateY(${offsetY*0.12}px)` }} />
+      <div style={{ position:'absolute', inset:0, zIndex:0, pointerEvents:'none', backgroundImage:'linear-gradient(rgba(15,27,76,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(15,27,76,0.06) 1px,transparent 1px)', backgroundSize:'60px 60px', transform:`translateY(${offsetY*0.12}px)` }} />
       <div style={{ position:'absolute', top:'-10%', left:'-5%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(219,0,44,0.08) 0%,transparent 65%)', pointerEvents:'none' }} />
       <div style={{ position:'absolute', bottom:'-10%', right:'-5%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.15) 0%,transparent 65%)', pointerEvents:'none' }} />
       <div style={{ position:'absolute', left:0, right:0, height:2, zIndex:1, pointerEvents:'none', background:'linear-gradient(90deg,transparent,rgba(219,0,44,0.3),transparent)', animation:'scanline 6s linear infinite' }} />
