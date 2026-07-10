@@ -8,6 +8,8 @@ const areas = [
 ];
 export default function Advocacia() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const isMobile = useMediaQuery('(max-width: 640px)');
+  const isTablet = useMediaQuery('(max-width: 960px)');
   return (
     <section id="advocacia" ref={ref} style={{ background: 'linear-gradient(180deg,#080e1a,#0a1220)', padding: '100px clamp(1rem,4vw,3rem)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
