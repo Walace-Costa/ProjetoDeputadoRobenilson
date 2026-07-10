@@ -36,7 +36,7 @@ export default function Politica() {
           <div style={{ display: 'grid', gridTemplateColumns: isTablet ? '1fr' : '1fr 1fr', gap: 16 }}>
             {propostas.map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: i * 0.1 }} whileHover={{ y: -4, borderColor: p.color }}
-                style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.07)', borderRadius: 14, padding: '24px 20px', position: 'relative', overflow: 'hidden', transition: 'border-color 0.3s' }}>
+                style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.07)', borderRadius: 14, padding: '24px 20px', position: 'relative', overflow: 'hidden', transition: 'border-color 0.3s', boxShadow: '0 4px 16px rgba(16,10,98,0.05)' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${p.color},transparent)` }} />
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
                   <span style={{ fontSize: 11, fontWeight: 600, color: p.color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{p.area}</span>
