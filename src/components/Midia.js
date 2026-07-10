@@ -37,7 +37,7 @@ const materias = [
     url: '#',
     destaque: false,
     tag: 'Em breve',
-    tagColor: '#F5A623',
+    tagColor: '#176939',
     img: null,
   },
 ];
