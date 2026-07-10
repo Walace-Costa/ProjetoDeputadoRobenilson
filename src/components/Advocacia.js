@@ -25,7 +25,7 @@ export default function Advocacia() {
             Professor, conselheiro tutelar, gestor social, advogado e presidente da ACTEBA. Cada cargo ocupado com o mesmo propósito: garantir direitos a quem mais precisa.
           </p>
         </motion.div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2,1fr)' : 'repeat(3,1fr)', gap: 24 }}>
           {areas.map((a, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: i * 0.15 }} whileHover={{ y: -8, boxShadow: `0 20px 60px ${a.glow}` }}
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16, padding: '36px 28px', cursor: 'default', position: 'relative', overflow: 'hidden' }}>
