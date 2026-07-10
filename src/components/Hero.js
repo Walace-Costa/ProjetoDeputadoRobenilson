@@ -65,17 +65,17 @@ export default function Hero() {
           </motion.div>
 
           <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.8, delay:0.4 }} style={{ position:'relative', marginBottom:24 }}>
-            <h1 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2.4rem,5vw,3.8rem)', fontWeight:700, lineHeight:1.12, color:'#fff' }}>
+            <h1 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2.4rem,5vw,3.8rem)', fontWeight:700, lineHeight:1.12, color:'var(--navy)' }}>
               Defensor da infância,<br />
               <span style={{ background:'linear-gradient(90deg,var(--red),var(--gold),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>
                 advogado do povo,
               </span><br />
-              <span style={{ color:'rgba(255,255,255,0.85)' }}>#BoraPraALBA</span>
+              <span style={{ color:'rgba(16,10,98,0.85)' }}>#BoraPraALBA</span>
             </h1>
           </motion.div>
 
           <motion.p initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6, delay:0.65 }}
-            style={{ color:'rgba(255,255,255,0.58)', fontSize:16, lineHeight:1.85, maxWidth:420, marginBottom:40 }}>
+            style={{ color:'rgba(16,10,98,0.68)', fontSize:16, lineHeight:1.85, maxWidth:420, marginBottom:40 }}>
             Advogado, presidente da ACTEBA e especialista em proteção da criança e do adolescente. Itabuna, Bahia. Agora candidato a Deputado Estadual pela ALBA para levar essa luta ao parlamento baiano.
           </motion.p>
 
