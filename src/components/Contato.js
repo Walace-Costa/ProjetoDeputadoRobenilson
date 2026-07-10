@@ -73,7 +73,7 @@ export default function Contato() {
                 { Icon: MailIcon, label: 'E-mail', val: 'contato@robenilsontorres.com.br', color: '#100a62', href: 'mailto:contato@robenilsontorres.com.br' },
               ].map(c => (
                 <motion.a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer" whileHover={{ x: 6, borderColor: c.color }}
-                  style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 10, cursor: 'pointer', transition: 'border-color 0.2s', background: '#fdfbf3', textDecoration: 'none' }}>
+                  style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 10, cursor: 'pointer', transition: 'border-color 0.2s', background: '#EEF3EA', textDecoration: 'none' }}>
                   <c.Icon width={22} height={22} style={{ color: c.color, flexShrink: 0 }} />
                   <div><div style={{ fontSize: 11, color: 'rgba(16,10,98,0.5)', marginBottom: 2 }}>{c.label}</div><div style={{ fontSize: 14, fontWeight: 500, color: 'var(--navy)' }}>{c.val}</div></div>
                 </motion.a>
