@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 // Adicione novas matérias aqui
 const materias = [
