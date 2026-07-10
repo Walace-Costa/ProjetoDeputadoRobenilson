@@ -158,12 +158,12 @@ export default function Midia() {
 
         {/* Aviso para adicionar matérias */}
         <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.5 }}
-          style={{ marginTop: 32, padding: '16px 20px', background: 'rgba(245,166,35,0.06)', border: '1px dashed rgba(245,166,35,0.25)', borderRadius: 10, display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+          style={{ marginTop: 32, padding: '16px 20px', background: 'rgba(255,222,0,0.12)', border: '1px dashed rgba(219,178,0,0.4)', borderRadius: 10, display: 'flex', gap: 12, alignItems: 'flex-start' }}>
           <span style={{ fontSize: 18 }}>💡</span>
           <div>
-            <div style={{ color: 'var(--gold)', fontSize: 13, fontWeight: 600, marginBottom: 4 }}>Como adicionar novas matérias</div>
-            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, lineHeight: 1.6 }}>
-              Abra o arquivo <code style={{ background: 'rgba(255,255,255,0.06)', padding: '1px 6px', borderRadius: 4 }}>src/components/Midia.js</code> e adicione um novo objeto no array <code style={{ background: 'rgba(255,255,255,0.06)', padding: '1px 6px', borderRadius: 4 }}>materias</code> com título, URL, veículo e data.
+            <div style={{ color: 'var(--navy)', fontSize: 13, fontWeight: 600, marginBottom: 4 }}>Como adicionar novas matérias</div>
+            <div style={{ color: 'rgba(16,10,98,0.55)', fontSize: 13, lineHeight: 1.6 }}>
+              Abra o arquivo <code style={{ background: 'rgba(16,10,98,0.08)', padding: '1px 6px', borderRadius: 4 }}>src/components/Midia.js</code> e adicione um novo objeto no array <code style={{ background: 'rgba(16,10,98,0.08)', padding: '1px 6px', borderRadius: 4 }}>materias</code> com título, URL, veículo e data.
             </div>
           </div>
         </motion.div>
