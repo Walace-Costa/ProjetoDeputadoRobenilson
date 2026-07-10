@@ -98,7 +98,7 @@ export default function Contato() {
                       <label style={{ display: 'block', fontSize: 12, fontWeight: 500, color: 'rgba(16,10,98,0.6)', marginBottom: 6 }}>{f.label}</label>
                       <input type={f.type} placeholder={f.ph} required value={form[f.id]} onChange={e => setForm({ ...form, [f.id]: e.target.value })}
                         className="contato-input"
-                        style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(16,10,98,0.15)', borderRadius: 8, fontSize: 14, background: 'var(--bg)', color: 'var(--navy)', outline: 'none', fontFamily: 'var(--sans)' }} />
+                        style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(16,10,98,0.2)', borderRadius: 8, fontSize: 14, background: '#fff', color: 'var(--navy)', outline: 'none', fontFamily: 'var(--sans)' }} />
                     </div>
                   ))}
                   <div>
