@@ -41,7 +41,7 @@ function Card({ m }) {
         <div style={{ padding:'14px 16px 18px' }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
             <span style={{ color:'rgba(255,255,255,0.4)', fontSize:10 }}>{m.veiculo} · {m.data}</span>
-            <span style={{ background:`${m.tagColor}1f`, color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
+            <span style={{ background:'rgba(255,255,255,0.92)', color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
           </div>
           <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'#FFFFFF', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
           <p style={{ color:'rgba(255,255,255,0.6)', fontSize:11, lineHeight:1.6, marginBottom:12 }}>{m.resumo}</p>
