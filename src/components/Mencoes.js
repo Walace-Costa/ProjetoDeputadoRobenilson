@@ -27,7 +27,7 @@ function Card({ m }) {
     <a href={m.url} target="_blank" rel="noopener noreferrer"
       style={{ textDecoration:'none', display:'block', flexShrink:0, width:300 }}>
       <motion.div whileHover={{ y:-6, borderColor:m.tagColor, boxShadow:`0 12px 40px ${m.tagColor}30` }}
-        style={{ background:'#F5F8F3', border:'1px solid rgba(45,74,43,0.1)', borderRadius:14, overflow:'hidden', boxShadow:'0 2px 10px rgba(16,10,98,0.05)', transition:'border-color 0.25s, box-shadow 0.25s', height:'100%', cursor:'pointer', position:'relative' }}>
+        style={{ background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:14, overflow:'hidden', boxShadow:'0 2px 10px rgba(0,0,0,0.15)', transition:'border-color 0.25s, box-shadow 0.25s', height:'100%', cursor:'pointer', position:'relative' }}>
         <div style={{ height:3, background:`linear-gradient(90deg,${m.tagColor},${m.tagColor}55,transparent)` }} />
         {m.img ? (
           <div style={{ height:120, overflow:'hidden', background:'var(--cream)' }}>
