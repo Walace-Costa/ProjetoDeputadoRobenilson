@@ -14,23 +14,23 @@ export default function Politica() {
   const isMobile = useMediaQuery('(max-width: 860px)');
   const isTablet = useMediaQuery('(max-width: 640px)');
   return (
-    <section id="politica" ref={ref} style={{ background: 'linear-gradient(180deg,#0a1220,#080e1a)', padding: '100px clamp(1rem,4vw,3rem)' }}>
+    <section id="politica" ref={ref} style={{ background: 'var(--bg)', padding: '100px clamp(1rem,4vw,3rem)' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 2fr', gap: isMobile ? 40 : 80, alignItems: 'start' }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} style={{ position: isMobile ? 'static' : 'sticky', top: 100 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(230,59,46,0.08)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(219,0,44,0.08)', border: '1px solid rgba(219,0,44,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
               <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)' }} />
               <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Plataforma política</span>
             </div>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 20 }}>Propostas com raiz na realidade</h2>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 15, lineHeight: 1.8, marginBottom: 32 }}>Não são promessas de palanque. São projetos baseados em experiência real com políticas públicas e defesa dos direitos de crianças.</p>
+            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2, marginBottom: 20 }}>Propostas com raiz na realidade</h2>
+            <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 15, lineHeight: 1.8, marginBottom: 32 }}>Não são promessas de palanque. São projetos baseados em experiência real com políticas públicas e defesa dos direitos de crianças.</p>
             {/* Avatar decorativo */}
             <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
-              <img src="/avatar-casual.jpg" alt="" style={{ width: 120, height: 150, objectFit: 'cover', objectPosition: 'top', borderRadius: 16, border: '2px solid rgba(230,59,46,0.3)', boxShadow: '0 8px 32px rgba(230,59,46,0.2)', display: 'block', marginBottom: 24 }} />
+              <img src="/avatar-casual.jpg" alt="" style={{ width: 120, height: 150, objectFit: 'cover', objectPosition: 'top', borderRadius: 16, border: '2px solid rgba(219,0,44,0.3)', boxShadow: '0 8px 32px rgba(219,0,44,0.15)', display: 'block', marginBottom: 24 }} />
             </motion.div>
-            <div style={{ background: 'rgba(230,59,46,0.06)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 12, padding: '20px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+            <div style={{ background: 'rgba(219,0,44,0.06)', border: '1px solid rgba(219,0,44,0.2)', borderRadius: 12, padding: '20px', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
               <span style={{ fontSize: 20 }}>🔒</span>
-              <div><div style={{ color: '#fff', fontSize: 14, fontWeight: 600, marginBottom: 4 }}>Mandato transparente</div><div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, lineHeight: 1.6 }}>Todo real do mandato publicado mensalmente com nota fiscal.</div></div>
+              <div><div style={{ color: 'var(--navy)', fontSize: 14, fontWeight: 600, marginBottom: 4 }}>Mandato transparente</div><div style={{ color: 'rgba(16,10,98,0.55)', fontSize: 13, lineHeight: 1.6 }}>Todo real do mandato publicado mensalmente com nota fiscal.</div></div>
             </div>
           </motion.div>
           <div style={{ display: 'grid', gridTemplateColumns: isTablet ? '1fr' : '1fr 1fr', gap: 16 }}>
