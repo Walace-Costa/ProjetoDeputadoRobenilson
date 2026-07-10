@@ -28,7 +28,7 @@ export default function Advocacia() {
         <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : isTablet ? 'repeat(2,1fr)' : 'repeat(3,1fr)', gap: 24 }}>
           {areas.map((a, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: i * 0.15 }} whileHover={{ y: -8, boxShadow: `0 20px 60px ${a.glow}` }}
-              style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 16, padding: '36px 28px', cursor: 'default', position: 'relative', overflow: 'hidden' }}>
+              style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 16, padding: '36px 28px', cursor: 'default', position: 'relative', overflow: 'hidden', boxShadow: '0 4px 18px rgba(16,10,98,0.06)' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,transparent,${a.color},transparent)` }} />
               <div style={{ fontSize: 36, marginBottom: 20 }}>{a.icon}</div>
               <div style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: a.color, lineHeight: 1, marginBottom: 8 }}>{a.num}</div>
