@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 const links = [
   { label: 'História', href: '#foto-historia' },
@@ -12,24 +13,29 @@ const links = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 900px)');
+
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', fn);
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
+  useEffect(() => { if (!isMobile) setMenuOpen(false); }, [isMobile]);
+
   return (
     <motion.nav initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
-        background: scrolled ? 'rgba(8,14,26,0.96)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(230,59,46,0.2)' : 'none',
+        background: (scrolled || menuOpen) ? 'rgba(8,14,26,0.96)' : 'transparent',
+        backdropFilter: (scrolled || menuOpen) ? 'blur(20px)' : 'none',
+        borderBottom: (scrolled || menuOpen) ? '1px solid rgba(230,59,46,0.2)' : 'none',
         transition: 'all 0.4s ease', padding: '0 clamp(1rem,4vw,3rem)',
       }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
         <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <div style={{ width: 42, height: 42, borderRadius: 8, background: 'linear-gradient(135deg,var(--red),var(--blue))', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulseRed 3s infinite' }}>
+          <div style={{ width: 42, height: 42, borderRadius: 8, background: 'linear-gradient(135deg,var(--red),var(--blue))', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'pulseRed 3s infinite', flexShrink: 0 }}>
             <span style={{ fontFamily: 'var(--serif)', color: '#fff', fontWeight: 700, fontSize: 15 }}>RT</span>
           </div>
           <div>
@@ -39,19 +45,49 @@ export default function Navbar() {
             </div>
           </div>
         </a>
-        <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
-          {links.map(l => (
-            <motion.a key={l.href} href={l.href} whileHover={{ color: '#E63B2E' }}
-              style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: 13 }}>
-              {l.label}
+
+        {isMobile ? (
+          <button onClick={() => setMenuOpen(v => !v)} aria-label="Abrir menu" aria-expanded={menuOpen}
+            style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: 8, width: 40, height: 40 }}>
+            <span style={{ width: 22, height: 2, background: '#fff', borderRadius: 2, transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
+            <span style={{ width: 22, height: 2, background: '#fff', borderRadius: 2, transition: 'opacity 0.3s', opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ width: 22, height: 2, background: '#fff', borderRadius: 2, transition: 'transform 0.3s, opacity 0.3s', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
+          </button>
+        ) : (
+          <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+            {links.map(l => (
+              <motion.a key={l.href} href={l.href} whileHover={{ color: '#E63B2E' }}
+                style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: 13 }}>
+                {l.label}
+              </motion.a>
+            ))}
+            <motion.a href="#contato" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+              style={{ background: 'linear-gradient(135deg,var(--red),#c0392b)', color: '#fff', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 600, textDecoration: 'none', boxShadow: '0 4px 20px var(--red-glow)' }}>
+              #BoraPraALBA
             </motion.a>
-          ))}
-          <motion.a href="#contato" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-            style={{ background: 'linear-gradient(135deg,var(--red),#c0392b)', color: '#fff', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 600, textDecoration: 'none', boxShadow: '0 4px 20px var(--red-glow)' }}>
-            #BoraPraALBA
-          </motion.a>
-        </div>
+          </div>
+        )}
       </div>
+
+      <AnimatePresence>
+        {isMobile && menuOpen && (
+          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}
+            style={{ overflow: 'hidden' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', padding: '8px clamp(1rem,4vw,3rem) 28px', gap: 2 }}>
+              {links.map(l => (
+                <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
+                  style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+                  {l.label}
+                </a>
+              ))}
+              <a href="#contato" onClick={() => setMenuOpen(false)}
+                style={{ marginTop: 18, textAlign: 'center', background: 'linear-gradient(135deg,var(--red),#c0392b)', color: '#fff', padding: '13px 22px', borderRadius: 7, fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>
+                #BoraPraALBA
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }
