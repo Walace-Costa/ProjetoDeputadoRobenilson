@@ -95,7 +95,7 @@ export default function Hero() {
         {/* Foto real no cartão */}
         <motion.div initial={{ opacity:0, x:50, scale:0.95 }} animate={{ opacity:1, x:0, scale:1 }} transition={{ duration:0.9, delay:0.5 }} style={{ display:'flex', justifyContent:'center' }}>
           <motion.div animate={{ y:[0,-12,0] }} transition={{ duration:5, repeat:Infinity, ease:'easeInOut' }}
-            style={{ background:'var(--cream)', border:'1px solid rgba(16,10,98,0.1)', borderRadius:24, padding:'32px 28px', textAlign:'center', width:'100%', maxWidth:320, boxShadow:'0 20px 50px rgba(16,10,98,0.1)', position:'relative', overflow:'hidden' }}>
+            style={{ background:'#FFFFFF', border:'1px solid rgba(15,27,76,0.1)', borderRadius:24, padding:'32px 28px', textAlign:'center', width:'100%', maxWidth:320, boxShadow:'0 20px 60px rgba(15,27,76,0.12), 0 4px 16px rgba(15,27,76,0.08)', position:'relative', overflow:'hidden' }}>
             <div style={{ position:'absolute', top:'50%', left:'50%', width:280, height:280, marginLeft:-140, marginTop:-140, borderRadius:'50%', border:'1px solid transparent', borderTopColor:'rgba(219,0,44,0.25)', borderRightColor:'rgba(16,10,98,0.2)', animation:'rotateRing 8s linear infinite', pointerEvents:'none' }} />
 
             {/* Foto real terno verde */}
