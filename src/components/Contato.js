@@ -58,7 +58,7 @@ export default function Contato() {
     <section id="contato" ref={ref} style={{ background: '#080e1a', padding: '100px clamp(1rem,4vw,3rem)', position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle,rgba(230,59,46,0.03) 1px,transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
       <div style={{ maxWidth: 1200, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 40 : 80 }}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(230,59,46,0.08)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
               <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)', animation: 'pulseRed 2s infinite' }} />
