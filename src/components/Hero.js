@@ -121,7 +121,7 @@ export default function Hero() {
 
       <motion.div initial={{ opacity:0 }} animate={{ opacity:0.6 }} transition={{ delay:1.5 }}
         style={{ position:'absolute', bottom:32, left:'50%', transform:'translateX(-50%)', display:'flex', flexDirection:'column', alignItems:'center' }}>
-        <div style={{ width:24, height:40, border:'1px solid rgba(230,59,46,0.3)', borderRadius:12, display:'flex', justifyContent:'center', paddingTop:6 }}>
+        <div style={{ width:24, height:40, border:'1px solid rgba(16,10,98,0.25)', borderRadius:12, display:'flex', justifyContent:'center', paddingTop:6 }}>
           <motion.div animate={{ y:[0,14,0], opacity:[1,0,1] }} transition={{ duration:1.8, repeat:Infinity }}
             style={{ width:3, height:8, background:'var(--red)', borderRadius:2 }} />
         </div>
