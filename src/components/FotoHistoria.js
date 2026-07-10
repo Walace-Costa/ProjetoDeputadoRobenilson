@@ -22,7 +22,7 @@ function FotoToggle({ fotoReal, avatar, accent }) {
           style={{ position:'absolute', maxHeight:400, maxWidth:'80%', objectFit:'contain', objectPosition:'top', borderRadius:16, border:`2px solid ${accent}44`, boxShadow:`0 0 40px ${accent}20` }} />
       </AnimatePresence>
       <motion.button whileHover={{ scale:1.08 }} whileTap={{ scale:0.95 }} onClick={() => setShowAvatar(v=>!v)}
-        style={{ position:'absolute', bottom:20, right:20, zIndex:10, background:showAvatar?'rgba(255,253,245,0.85)':`${accent}cc`, border:`1px solid ${accent}55`, borderRadius:10, padding:'9px 15px', color:showAvatar?'var(--navy)':'#fff', fontSize:12, fontWeight:600, cursor:'pointer', display:'flex', alignItems:'center', gap:7, backdropFilter:'blur(8px)' }}>
+        style={{ position:'absolute', bottom:20, right:20, zIndex:10, background:showAvatar?'rgba(247,242,230,0.88)':`${accent}cc`, border:`1px solid ${accent}55`, borderRadius:10, padding:'9px 15px', color:showAvatar?'var(--navy)':'#fff', fontSize:12, fontWeight:600, cursor:'pointer', display:'flex', alignItems:'center', gap:7, backdropFilter:'blur(8px)' }}>
         <span>{showAvatar?'📸':'🎨'}</span>{showAvatar?'Foto real':'Ver cartoon'}
       </motion.button>
     </div>
