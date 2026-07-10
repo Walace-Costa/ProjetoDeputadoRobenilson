@@ -56,7 +56,7 @@ function CardDestaque({ m }) {
         {m.img && (
           <img src={m.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85, position: 'absolute', inset: 0 }} />
         )}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, transparent 40%, #fffdf5)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, transparent 40%, var(--bg))' }} />
         <div style={{ position: 'absolute', top: 20, left: 20 }}>
           <div style={{ background: 'var(--red)', color: '#fff', fontSize: 11, fontWeight: 700, padding: '5px 12px', borderRadius: 999, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{m.tag}</div>
         </div>
