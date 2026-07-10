@@ -56,13 +56,13 @@ export default function Navbar() {
         ) : (
           <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
             {links.map(l => (
-              <motion.a key={l.href} href={l.href} whileHover={{ color: '#E63B2E' }}
-                style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: 13 }}>
+              <motion.a key={l.href} href={l.href} whileHover={{ color: 'var(--red)' }}
+                style={{ color: 'rgba(16,10,98,0.7)', textDecoration: 'none', fontSize: 13 }}>
                 {l.label}
               </motion.a>
             ))}
             <motion.a href="#contato" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-              style={{ background: 'linear-gradient(135deg,var(--red),#c0392b)', color: '#fff', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 600, textDecoration: 'none', boxShadow: '0 4px 20px var(--red-glow)' }}>
+              style={{ background: 'var(--gold)', color: 'var(--navy)', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 20px var(--gold-glow)' }}>
               #BoraPraALBA
             </motion.a>
           </div>
