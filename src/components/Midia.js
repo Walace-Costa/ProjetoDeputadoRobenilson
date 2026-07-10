@@ -44,14 +44,15 @@ const materias = [
 
 function CardDestaque({ m }) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const isMobile = useMediaQuery('(max-width: 760px)');
   return (
     <motion.div ref={ref}
       initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7 }}
-      style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 0, borderRadius: 20, overflow: 'hidden', border: '1px solid rgba(230,59,46,0.3)', background: 'rgba(230,59,46,0.04)' }}>
+      style={{ gridColumn: '1 / -1', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.2fr 1fr', gap: 0, borderRadius: 20, overflow: 'hidden', border: '1px solid rgba(230,59,46,0.3)', background: 'rgba(230,59,46,0.04)' }}>
 
       {/* Imagem */}
-      <div style={{ position: 'relative', minHeight: 280, background: '#0a1020', overflow: 'hidden' }}>
+      <div style={{ position: 'relative', minHeight: isMobile ? 200 : 280, background: '#0a1020', overflow: 'hidden' }}>
         {m.img && (
           <img src={m.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.7, position: 'absolute', inset: 0 }} />
         )}
