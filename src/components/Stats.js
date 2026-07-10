@@ -3,10 +3,10 @@ import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 const items = [
-  { num:15, suffix:'+', label:'Anos de atuação social', color:'#db002c' },
-  { num:60, suffix:'', label:'Delegados baianos em Brasília', color:'#176939' },
-  { num:100, suffix:'+', label:'Municípios capacitados na Bahia', color:'#100a62' },
-  { num:1, suffix:'º', label:'Seminário Nacional MEC 2026', color:'#176939' },
+  { num:15, suffix:'+', label:'Anos de atuação social', color:'#ff4d6d' },
+  { num:60, suffix:'', label:'Delegados baianos em Brasília', color:'#2fd480' },
+  { num:100, suffix:'+', label:'Municípios capacitados na Bahia', color:'#ffde00' },
+  { num:1, suffix:'º', label:'Seminário Nacional MEC 2026', color:'#2fd480' },
 ];
 export default function Stats() {
   const { ref, inView } = useInView({ threshold:0.3, triggerOnce:true });
