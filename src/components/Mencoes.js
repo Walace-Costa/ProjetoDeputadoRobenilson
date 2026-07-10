@@ -78,7 +78,7 @@ export default function Mencoes() {
   const { ref, inView } = useInView({ threshold:0.05, triggerOnce:true });
   return (
     <section id="mencoes" ref={ref} style={{
-      background:'#eef6f0',
+      background:'#EEF3EA',
       padding:'90px 0', position:'relative', overflow:'hidden',
       borderTop:'1px solid rgba(23,105,57,0.18)',
       borderBottom:'1px solid rgba(23,105,57,0.18)',
