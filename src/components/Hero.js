@@ -12,7 +12,7 @@ function Particles() {
       x: Math.random() * w, y: Math.random() * h,
       vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
       r: Math.random() * 2 + 0.5,
-      c: Math.random() > 0.5 ? 'rgba(230,59,46,' : 'rgba(26,86,219,',
+      c: Math.random() > 0.5 ? 'rgba(219,0,44,' : 'rgba(16,10,98,',
       o: Math.random() * 0.5 + 0.1,
     }));
     let raf;
