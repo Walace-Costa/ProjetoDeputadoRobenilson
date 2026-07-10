@@ -64,7 +64,7 @@ function Card({ m, i }) {
 export default function FotoHistoria() {
   return (
     <section id="foto-historia" style={{ background:'var(--dark)' }}>
-      <div style={{ background:'var(--cream)', padding:'80px clamp(1rem,4vw,3rem) 72px', textAlign:'center', borderBottom:'1px solid rgba(219,0,44,0.15)' }}>
+      <div style={{ background:'var(--cream)', padding:'80px clamp(1rem,4vw,3rem) 72px', textAlign:'center', borderBottom:'1px solid rgba(219,0,44,0.15)', boxShadow:'inset 0 1px 0 rgba(255,255,255,0.5), 0 4px 20px rgba(16,10,98,0.04)' }}>
         <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(219,0,44,0.1)', border:'1px solid rgba(219,0,44,0.25)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
           <div style={{ width:6, height:6, borderRadius:'50%', background:'var(--red)' }} />
           <span style={{ color:'var(--red)', fontSize:11, fontWeight:600, letterSpacing:'0.1em', textTransform:'uppercase' }}>A história dele</span>
