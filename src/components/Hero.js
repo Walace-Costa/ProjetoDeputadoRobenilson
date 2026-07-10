@@ -41,6 +41,7 @@ function Particles() {
 
 export default function Hero() {
   const [offsetY, setOffsetY] = useState(0);
+  const isMobile = useMediaQuery('(max-width: 860px)');
   useEffect(() => {
     const fn = () => setOffsetY(window.scrollY);
     window.addEventListener('scroll', fn, { passive: true });
