@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 const momentos = [
   { titulo: 'Raízes, militância e formação', texto: 'Advogado formado pela UESC, Robenilson Torres iniciou sua trajetória na militância estudantil como representante do DCE. Desde jovem, escolheu a luta pelos direitos como caminho de vida — especialmente em favor das crianças e adolescentes do sul da Bahia.', ano: '2000s', accent: '#E63B2E', fotoReal: '/foto-terno-azul.png', avatar: '/avatar-casual.jpg' },
