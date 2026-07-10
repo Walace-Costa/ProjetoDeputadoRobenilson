@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 const mencoes = [
   { veiculo:'Pimenta Blog', data:'Jun 2013', titulo:'Pensamento crítico e coragem opinativa marcando a nossa história', resumo:'Liderança de verdade se constrói com consistência e capacidade de analisar a realidade sem medo. Neste artigo autoral publicado em 2013 no Pimenta Blog, o advogado Robenilson Torres destrincha as contradições da gestão pública da época, apontando caminhos para uma política mais coerente e transparente. O olhar técnico e a firmeza ideológica de quem estuda e debate o nosso cenário há anos.', url:'https://pimenta.blog.br/2013/06/07/a-logica-da-contradicao/', img:null, tag:'Artigo', tagColor:'#E63B2E' },
