@@ -1,0 +1,26 @@
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --red: #E63B2E; --red-glow: rgba(230,59,46,0.3);
+  --blue: #1A56DB; --blue-glow: rgba(26,86,219,0.3);
+  --gold: #F5A623;
+  --white: #FFFFFF; --dark: #080E1A; --dark2: #0D1626;
+  --gray: rgba(255,255,255,0.5);
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--dark); color: #fff; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: var(--red); color: #fff; }
+@keyframes pulseRed { 0%,100%{box-shadow:0 0 0 0 var(--red-glow)} 50%{box-shadow:0 0 0 14px rgba(230,59,46,0)} }
+@keyframes gradientShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes scanline { 0%{transform:translateY(-100%)} 100%{transform:translateY(100vh)} }
+@keyframes rotateRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes glitch1 { 0%,100%{clip-path:inset(0 0 95% 0);transform:translateX(-3px)} 40%{clip-path:inset(60% 0 20% 0);transform:translateX(3px)} 80%{clip-path:inset(80% 0 5% 0);transform:translateX(-1px)} }
+@keyframes glitch2 { 0%,100%{clip-path:inset(80% 0 5% 0);transform:translateX(3px)} 40%{clip-path:inset(50% 0 30% 0);transform:translateX(-3px)} 80%{clip-path:inset(5% 0 90% 0);transform:translateX(1px)} }

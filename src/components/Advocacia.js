@@ -1,0 +1,40 @@
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+const areas = [
+  { icon: '👶', area: 'Proteção da Infância', desc: 'Especialista em Proteção Integral da Criança e do Adolescente. Presidente da Comissão da OAB Itabuna dedicada à defesa dos direitos de crianças e adolescentes.', num: '15+', color: '#E63B2E', glow: 'rgba(230,59,46,0.2)' },
+  { icon: '⚖️', area: 'Advocacia e Cidadania', desc: 'Formado em Direito com atuação voltada para as causas sociais. Combina o conhecimento jurídico com a militância ativa em políticas públicas para a primeira infância.', num: 'OAB/BA', color: '#1A56DB', glow: 'rgba(26,86,219,0.2)' },
+  { icon: '🏛️', area: 'Políticas Públicas', desc: 'Representante da Bahia no 1º Seminário Nacional de Políticas Públicas para a Primeira Infância do MEC. Integrante do Fórum Colegiado Nacional de Conselheiros Tutelares.', num: 'MEC', color: '#F5A623', glow: 'rgba(245,166,35,0.2)' },
+];
+export default function Advocacia() {
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  return (
+    <section id="advocacia" ref={ref} style={{ background: 'linear-gradient(180deg,#080e1a,#0a1220)', padding: '100px clamp(1rem,4vw,3rem)' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} style={{ maxWidth: 600, marginBottom: 64 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(230,59,46,0.08)', border: '1px solid rgba(230,59,46,0.2)', borderRadius: 999, padding: '5px 14px', marginBottom: 16 }}>
+            <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--red)' }} />
+            <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Atuação profissional</span>
+          </div>
+          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3.5vw,2.8rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 16 }}>
+            Uma vida dedicada à proteção dos mais vulneráveis
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 15, lineHeight: 1.8 }}>
+            Professor, conselheiro tutelar, gestor social, advogado e presidente da ACTEBA. Cada cargo ocupado com o mesmo propósito: garantir direitos a quem mais precisa.
+          </p>
+        </motion.div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 24 }}>
+          {areas.map((a, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: i * 0.15 }} whileHover={{ y: -8, boxShadow: `0 20px 60px ${a.glow}` }}
+              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16, padding: '36px 28px', cursor: 'default', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,transparent,${a.color},transparent)` }} />
+              <div style={{ fontSize: 36, marginBottom: 20 }}>{a.icon}</div>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 700, color: a.color, lineHeight: 1, marginBottom: 8 }}>{a.num}</div>
+              <h3 style={{ color: '#fff', fontSize: 18, fontWeight: 600, marginBottom: 12, fontFamily: 'var(--serif)' }}>{a.area}</h3>
+              <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, lineHeight: 1.7 }}>{a.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
