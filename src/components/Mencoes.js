@@ -45,7 +45,7 @@ function Card({ m }) {
           </div>
           <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'#FFFFFF', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
           <p style={{ color:'rgba(255,255,255,0.6)', fontSize:11, lineHeight:1.6, marginBottom:12 }}>{m.resumo}</p>
-          <div style={{ display:'flex', alignItems:'center', gap:5, color:m.tagColor, fontSize:11, fontWeight:600 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:5, color:'#FFFFFF', fontSize:11, fontWeight:600 }}>
             Ler matéria
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </div>
