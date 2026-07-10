@@ -36,14 +36,14 @@ export default function Politica() {
           <div style={{ display: 'grid', gridTemplateColumns: isTablet ? '1fr' : '1fr 1fr', gap: 16 }}>
             {propostas.map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: i * 0.1 }} whileHover={{ y: -4, borderColor: p.color }}
-                style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 14, padding: '24px 20px', position: 'relative', overflow: 'hidden', transition: 'border-color 0.3s' }}>
+                style={{ background: 'var(--cream)', border: '1px solid rgba(16,10,98,0.07)', borderRadius: 14, padding: '24px 20px', position: 'relative', overflow: 'hidden', transition: 'border-color 0.3s' }}>
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${p.color},transparent)` }} />
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
                   <span style={{ fontSize: 11, fontWeight: 600, color: p.color, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{p.area}</span>
                   <span style={{ fontSize: 10, fontWeight: 700, padding: '3px 9px', borderRadius: 999, background: `${p.color}22`, color: p.color }}>{p.tag}</span>
                 </div>
-                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 700, color: '#fff', marginBottom: 10, lineHeight: 1.35 }}>{p.titulo}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, lineHeight: 1.65 }}>{p.desc}</p>
+                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 700, color: 'var(--navy)', marginBottom: 10, lineHeight: 1.35 }}>{p.titulo}</h3>
+                <p style={{ color: 'rgba(16,10,98,0.55)', fontSize: 13, lineHeight: 1.65 }}>{p.desc}</p>
               </motion.div>
             ))}
           </div>
