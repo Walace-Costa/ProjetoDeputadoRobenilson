@@ -40,7 +40,7 @@ function Card({ m }) {
         )}
         <div style={{ padding:'14px 16px 18px' }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
-            <span style={{ color:'#6B6B6B', fontSize:10 }}>{m.veiculo} · {m.data}</span>
+            <span style={{ color:'#565656', fontSize:10 }}>{m.veiculo} · {m.data}</span>
             <span style={{ background:`${m.tagColor}1f`, color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
           </div>
           <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'#0F1B4C', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
