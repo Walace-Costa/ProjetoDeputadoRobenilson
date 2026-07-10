@@ -38,23 +38,23 @@ function Card({ m, i }) {
   return (
     <motion.div ref={ref} initial={{ opacity:0, y:60 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:0.7, ease:[0.22,1,0.36,1] }}
       style={{ display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', minHeight: isMobile ? undefined : 480 }}>
-      <div style={{ order:imgOrder, background:'#080e1a', position:'relative', overflow:'hidden', minHeight: isMobile ? 320 : 480 }}>
-        <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(${m.accent}08 1px,transparent 1px),linear-gradient(90deg,${m.accent}08 1px,transparent 1px)`, backgroundSize:'40px 40px', pointerEvents:'none' }} />
-        <div style={{ position:'absolute', inset:0, background:`radial-gradient(circle at center,${m.accent}10 0%,transparent 65%)`, pointerEvents:'none' }} />
+      <div style={{ order:imgOrder, background:'var(--cream)', position:'relative', overflow:'hidden', minHeight: isMobile ? 320 : 480 }}>
+        <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(${m.accent}0c 1px,transparent 1px),linear-gradient(90deg,${m.accent}0c 1px,transparent 1px)`, backgroundSize:'40px 40px', pointerEvents:'none' }} />
+        <div style={{ position:'absolute', inset:0, background:`radial-gradient(circle at center,${m.accent}12 0%,transparent 65%)`, pointerEvents:'none' }} />
         <FotoToggle fotoReal={m.fotoReal} avatar={m.avatar} accent={m.accent} />
-        <div style={{ position:'absolute', bottom:12, [isEven?'right':'left']:16, fontFamily:'var(--serif)', fontSize:80, fontWeight:700, color:'rgba(255,255,255,0.03)', lineHeight:1, userSelect:'none', pointerEvents:'none' }}>{m.ano}</div>
+        <div style={{ position:'absolute', bottom:12, [isEven?'right':'left']:16, fontFamily:'var(--serif)', fontSize:80, fontWeight:700, color:'rgba(16,10,98,0.05)', lineHeight:1, userSelect:'none', pointerEvents:'none' }}>{m.ano}</div>
         <div style={{ position:'absolute', top:0, bottom:0, [isEven?'right':'left']:0, width:3, background:`linear-gradient(to bottom,transparent,${m.accent},transparent)` }} />
       </div>
       <motion.div initial={{ opacity:0, x:isEven?40:-40 }} animate={inView?{opacity:1,x:0}:{}} transition={{ duration:0.7, delay:0.2 }}
-        style={{ order:textOrder, background:'#0a1020', display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(2rem,5vw,5rem)', borderBottom:'1px solid rgba(255,255,255,0.04)' }}>
+        style={{ order:textOrder, background:'var(--bg)', display:'flex', flexDirection:'column', justifyContent:'center', padding:'clamp(2rem,5vw,5rem)', borderBottom:'1px solid rgba(16,10,98,0.07)' }}>
         <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:24 }}>
           <div style={{ height:2, width:40, background:m.accent, borderRadius:1 }} />
           <span style={{ fontSize:11, fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:m.accent }}>{m.ano}</span>
         </div>
-        <h3 style={{ fontFamily:'var(--serif)', fontSize:'clamp(1.8rem,3vw,2.4rem)', fontWeight:700, color:'#fff', lineHeight:1.2, marginBottom:20 }}>{m.titulo}</h3>
-        <p style={{ color:'rgba(255,255,255,0.55)', fontSize:15, lineHeight:1.85 }}>{m.texto}</p>
+        <h3 style={{ fontFamily:'var(--serif)', fontSize:'clamp(1.8rem,3vw,2.4rem)', fontWeight:700, color:'var(--navy)', lineHeight:1.2, marginBottom:20 }}>{m.titulo}</h3>
+        <p style={{ color:'rgba(16,10,98,0.65)', fontSize:15, lineHeight:1.85 }}>{m.texto}</p>
         <div style={{ marginTop:28, display:'flex', alignItems:'center', gap:8 }}>
-          <span style={{ fontSize:12, color:'rgba(255,255,255,0.22)' }}>↩ Clique em "Ver cartoon" para alternar</span>
+          <span style={{ fontSize:12, color:'rgba(16,10,98,0.35)' }}>↩ Clique em "Ver cartoon" para alternar</span>
         </div>
       </motion.div>
     </motion.div>
