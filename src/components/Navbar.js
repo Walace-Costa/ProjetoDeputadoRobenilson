@@ -28,7 +28,7 @@ export default function Navbar() {
     <motion.nav initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
-        background: (scrolled || menuOpen) ? 'rgba(205,200,188,0.96)' : 'transparent',
+        background: (scrolled || menuOpen) ? 'rgba(180,174,160,0.97)' : 'transparent',
         backdropFilter: (scrolled || menuOpen) ? 'blur(20px)' : 'none',
         borderBottom: (scrolled || menuOpen) ? '1px solid rgba(16,10,98,0.1)' : 'none',
         transition: 'all 0.4s ease', padding: '0 clamp(1rem,4vw,3rem)',
