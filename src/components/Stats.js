@@ -14,7 +14,7 @@ export default function Stats() {
   const isTablet = useMediaQuery('(max-width: 900px)');
   const cols = isMobile ? 1 : isTablet ? 2 : 4;
   return (
-    <section ref={ref} style={{ background:'var(--cream)', borderTop:'1px solid rgba(219,0,44,0.15)', borderBottom:'1px solid rgba(16,10,98,0.12)' }}>
+    <section ref={ref} style={{ background:'var(--cream)', borderTop:'1px solid rgba(219,0,44,0.15)', borderBottom:'1px solid rgba(16,10,98,0.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,0.5), 0 4px 20px rgba(16,10,98,0.05)' }}>
       <div style={{ maxWidth:1200, margin:'0 auto', display:'grid', gridTemplateColumns:`repeat(${cols},1fr)` }}>
         {items.map((item,i) => (
           <motion.div key={i} initial={{ opacity:0, y:30 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:0.5, delay:i*0.1 }}
