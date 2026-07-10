@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 const areas = [
   { icon: '👶', area: 'Proteção da Infância', desc: 'Especialista em Proteção Integral da Criança e do Adolescente. Presidente da Comissão da OAB Itabuna dedicada à defesa dos direitos de crianças e adolescentes.', num: '15+', color: '#E63B2E', glow: 'rgba(230,59,46,0.2)' },
   { icon: '⚖️', area: 'Advocacia e Cidadania', desc: 'Formado em Direito com atuação voltada para as causas sociais. Combina o conhecimento jurídico com a militância ativa em políticas públicas para a primeira infância.', num: 'OAB/BA', color: '#1A56DB', glow: 'rgba(26,86,219,0.2)' },
