@@ -104,6 +104,7 @@ export default function Contato() {
                   <div>
                     <label style={{ display: 'block', fontSize: 12, fontWeight: 500, color: 'rgba(16,10,98,0.6)', marginBottom: 6 }}>Mensagem</label>
                     <textarea placeholder="Escreva sua mensagem..." required rows={4} value={form.mensagem} onChange={e => setForm({ ...form, mensagem: e.target.value })}
+                      className="contato-input"
                       style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(16,10,98,0.15)', borderRadius: 8, fontSize: 14, background: 'var(--bg)', color: 'var(--navy)', resize: 'vertical', outline: 'none', fontFamily: 'var(--sans)' }} />
                   </div>
                   <motion.button onClick={enviarWhatsapp} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
