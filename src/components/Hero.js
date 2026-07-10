@@ -79,7 +79,7 @@ export default function Hero() {
             Advogado, presidente da ACTEBA e especialista em proteção da criança e do adolescente. Itabuna, Bahia. Agora candidato a Deputado Estadual pela ALBA para levar essa luta ao parlamento baiano.
           </motion.p>
 
-          <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6, delay:0.8 }} style={{ display:'flex', gap:14 }}>
+          <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.6, delay:0.8 }} style={{ display:'flex', gap:14, flexWrap:'wrap' }}>
             <motion.a href="#politica" whileHover={{ scale:1.04, y:-2 }} whileTap={{ scale:0.97 }}
               style={{ background:'linear-gradient(135deg,var(--red),#c0392b)', color:'#fff', padding:'14px 30px', borderRadius:8, fontSize:14, fontWeight:700, textDecoration:'none', boxShadow:'0 6px 30px var(--red-glow)', display:'inline-flex', alignItems:'center', gap:8 }}>
               Ver propostas
