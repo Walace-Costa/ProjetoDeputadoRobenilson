@@ -12,7 +12,7 @@ function FotoToggle({ fotoReal, avatar, accent }) {
   const [showAvatar, setShowAvatar] = useState(false);
   const isMobile = useMediaQuery('(max-width: 860px)');
   return (
-    <div style={{ position:'relative', width:'100%', height:'100%', minHeight: isMobile ? 320 : 480, display:'flex', alignItems:'center', justifyContent:'center' }}>
+    <div style={{ position:'relative', width:'100%', height:'100%', minHeight: isMobile ? 280 : 340, display:'flex', alignItems:'center', justifyContent:'center' }}>
       <AnimatePresence mode="wait">
         <motion.img key={showAvatar?'av':'real'} src={showAvatar?avatar:fotoReal} alt="Robenilson Torres"
           initial={{ opacity:0, scale:0.97 }} animate={{ opacity:1, scale:1 }} exit={{ opacity:0, scale:0.97 }}
