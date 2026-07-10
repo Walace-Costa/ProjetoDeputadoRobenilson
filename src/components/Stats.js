@@ -10,12 +10,15 @@ const items = [
 ];
 export default function Stats() {
   const { ref, inView } = useInView({ threshold:0.3, triggerOnce:true });
+  const isMobile = useMediaQuery('(max-width: 640px)');
+  const isTablet = useMediaQuery('(max-width: 900px)');
+  const cols = isMobile ? 1 : isTablet ? 2 : 4;
   return (
     <section ref={ref} style={{ background:'linear-gradient(135deg,#0a1020,#0d1828)', borderTop:'1px solid rgba(230,59,46,0.15)', borderBottom:'1px solid rgba(26,86,219,0.15)' }}>
-      <div style={{ maxWidth:1200, margin:'0 auto', display:'grid', gridTemplateColumns:'repeat(4,1fr)' }}>
+      <div style={{ maxWidth:1200, margin:'0 auto', display:'grid', gridTemplateColumns:`repeat(${cols},1fr)` }}>
         {items.map((item,i) => (
           <motion.div key={i} initial={{ opacity:0, y:30 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:0.5, delay:i*0.1 }}
-            style={{ padding:'48px 28px', textAlign:'center', borderRight:i<3?'1px solid rgba(255,255,255,0.05)':'none', position:'relative', overflow:'hidden' }}>
+            style={{ padding:'48px 28px', textAlign:'center', borderRight:(i+1)%cols!==0?'1px solid rgba(255,255,255,0.05)':'none', borderBottom: cols<4 && i<items.length-cols ? '1px solid rgba(255,255,255,0.05)' : 'none', position:'relative', overflow:'hidden' }}>
             <div style={{ position:'absolute', inset:0, background:`radial-gradient(circle at center,${item.color}0a 0%,transparent 70%)` }} />
             <div style={{ fontFamily:'var(--serif)', fontSize:48, fontWeight:700, color:item.color, lineHeight:1, marginBottom:10 }}>
               {inView?<CountUp end={item.num} duration={2} delay={i*0.1} suffix={item.suffix} />:`0${item.suffix}`}
