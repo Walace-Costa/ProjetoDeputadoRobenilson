@@ -11,8 +11,8 @@
   --red: #db002c; --red-rgb: 219,0,44; --red-glow: rgba(219,0,44,0.3);
   --green: #176939; --green-rgb: 23,105,57; --green-glow: rgba(23,105,57,0.25);
   --gold: #ffde00; --gold-rgb: 255,222,0; --gold-glow: rgba(255,222,0,0.4);
-  --cream: #F7F3EA; --cream-rgb: 247,243,234;
-  --white: #FFFFFF; --bg: #eee2c4; --dark: #eee2c4; --dark2: #F7F3EA;
+  --cream: #EEF1FA; --cream-rgb: 238,241,250;
+  --white: #FFFFFF; --bg: #eee2c4; --dark: #eee2c4; --dark2: #EEF1FA;
   --muted: rgba(16,10,98,0.6);
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
