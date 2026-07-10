@@ -118,7 +118,7 @@ export default function Mencoes() {
       {/* Contador */}
       <motion.div initial={{ opacity:0 }} animate={inView?{opacity:1}:{}} transition={{ delay:0.5 }}
         style={{ textAlign:'center', marginTop:44, padding:'0 clamp(1rem,4vw,3rem)' }}>
-        <div style={{ display:'inline-flex', flexWrap:'wrap', justifyContent:'center', alignItems:'center', gap:12, background:'#fdfbf3', border:'1px solid rgba(23,105,57,0.2)', borderRadius:12, padding:'12px 28px', boxShadow:'0 2px 10px rgba(16,10,98,0.05)' }}>
+        <div style={{ display:'inline-flex', flexWrap:'wrap', justifyContent:'center', alignItems:'center', gap:12, background:'#EEF3EA', border:'1px solid rgba(23,105,57,0.2)', borderRadius:12, padding:'12px 28px', boxShadow:'0 4px 20px rgba(0,0,0,0.2)' }}>
           <span style={{ fontFamily:'var(--serif)', fontSize:32, fontWeight:700, color:'var(--green)' }}>{mencoes.length}+</span>
           <span style={{ color:'rgba(16,10,98,0.6)', fontSize:14 }}>matérias e menções na imprensa regional e nacional</span>
         </div>
