@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 const propostas = [
   { area: 'Infância & Adolescência', titulo: 'Rede municipal de proteção integral', desc: 'Criar uma rede integrada de serviços para crianças e adolescentes em situação de vulnerabilidade, unindo saúde, educação e assistência social.', tag: 'PL', color: '#E63B2E' },
   { area: 'Transparência', titulo: 'Câmara aberta e transmitida ao vivo', desc: 'Transmissão em tempo real de todas as sessões e divulgação mensal detalhada de gastos do mandato. O cidadão tem direito de saber.', tag: 'Fiscal.', color: '#1A56DB' },
