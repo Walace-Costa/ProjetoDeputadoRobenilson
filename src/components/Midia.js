@@ -90,14 +90,14 @@ function CardNormal({ m, i }) {
       initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: i * 0.1 }}
       whileHover={{ y: -6, borderColor: m.tagColor }}
-      style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.07)', background: 'rgba(255,255,255,0.025)', display: 'flex', flexDirection: 'column', transition: 'border-color 0.3s', position: 'relative' }}>
+      style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid rgba(16,10,98,0.08)', background: 'var(--cream)', display: 'flex', flexDirection: 'column', transition: 'border-color 0.3s', position: 'relative' }}>
 
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${m.tagColor},transparent)` }} />
 
       {/* Imagem topo */}
       {m.img && (
-        <div style={{ height: 140, overflow: 'hidden', background: '#0a1020' }}>
-          <img src={m.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.65 }} />
+        <div style={{ height: 140, overflow: 'hidden', background: '#fff4d4' }}>
+          <img src={m.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
         </div>
       )}
 
@@ -105,14 +105,14 @@ function CardNormal({ m, i }) {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span style={{ fontSize: 16 }}>{m.logo}</span>
-            <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12 }}>{m.veiculo}</span>
+            <span style={{ color: 'rgba(16,10,98,0.6)', fontSize: 12 }}>{m.veiculo}</span>
           </div>
           <span style={{ background: `${m.tagColor}22`, color: m.tagColor, fontSize: 10, fontWeight: 700, padding: '3px 9px', borderRadius: 999 }}>{m.tag}</span>
         </div>
-        <h4 style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 700, color: '#fff', lineHeight: 1.35, flex: 1 }}>{m.titulo}</h4>
-        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, lineHeight: 1.65 }}>{m.resumo}</p>
+        <h4 style={{ fontFamily: 'var(--serif)', fontSize: 15, fontWeight: 700, color: 'var(--navy)', lineHeight: 1.35, flex: 1 }}>{m.titulo}</h4>
+        <p style={{ color: 'rgba(16,10,98,0.55)', fontSize: 13, lineHeight: 1.65 }}>{m.resumo}</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 4 }}>
-          <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: 11 }}>{m.data}</span>
+          <span style={{ color: 'rgba(16,10,98,0.4)', fontSize: 11 }}>{m.data}</span>
           {m.url !== '#' && (
             <motion.a href={m.url} target="_blank" rel="noopener noreferrer" whileHover={{ x: 3 }}
               style={{ color: m.tagColor, fontSize: 12, fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
