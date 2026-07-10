@@ -33,7 +33,7 @@ export default function Politica() {
               <div><div style={{ color: '#fff', fontSize: 14, fontWeight: 600, marginBottom: 4 }}>Mandato transparente</div><div style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, lineHeight: 1.6 }}>Todo real do mandato publicado mensalmente com nota fiscal.</div></div>
             </div>
           </motion.div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isTablet ? '1fr' : '1fr 1fr', gap: 16 }}>
             {propostas.map((p, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: i * 0.1 }} whileHover={{ y: -4, borderColor: p.color }}
                 style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 14, padding: '24px 20px', position: 'relative', overflow: 'hidden', transition: 'border-color 0.3s' }}>
