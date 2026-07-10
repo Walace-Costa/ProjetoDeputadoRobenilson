@@ -67,11 +67,11 @@ function CardDestaque({ m }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <span style={{ fontSize: 18 }}>{m.logo}</span>
           <span style={{ color: 'var(--red)', fontSize: 13, fontWeight: 600 }}>{m.veiculo}</span>
-          <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: 12 }}>·</span>
-          <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>{m.data}</span>
+          <span style={{ color: 'rgba(16,10,98,0.25)', fontSize: 12 }}>·</span>
+          <span style={{ color: 'rgba(16,10,98,0.5)', fontSize: 12 }}>{m.data}</span>
         </div>
-        <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem,2vw,1.7rem)', fontWeight: 700, color: '#fff', lineHeight: 1.3 }}>{m.titulo}</h3>
-        <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 14, lineHeight: 1.75 }}>{m.resumo}</p>
+        <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.2rem,2vw,1.7rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.3 }}>{m.titulo}</h3>
+        <p style={{ color: 'rgba(16,10,98,0.65)', fontSize: 14, lineHeight: 1.75 }}>{m.resumo}</p>
         <motion.a href={m.url} target="_blank" rel="noopener noreferrer"
           whileHover={{ x: 4 }}
           style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--red)', fontSize: 13, fontWeight: 600, textDecoration: 'none', marginTop: 4 }}>
