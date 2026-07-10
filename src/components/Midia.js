@@ -25,7 +25,7 @@ const materias = [
     url: 'https://blogdoere.com.br/?p=29527',
     destaque: false,
     tag: 'Política pública',
-    tagColor: '#1A56DB',
+    tagColor: '#100a62',
     img: 'https://blogdoere.com.br/wp-content/uploads/2026/07/1000055564-150x150.jpg',
   },
   {
