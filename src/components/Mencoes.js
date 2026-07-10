@@ -78,27 +78,28 @@ export default function Mencoes() {
   const { ref, inView } = useInView({ threshold:0.05, triggerOnce:true });
   return (
     <section id="mencoes" ref={ref} style={{
-      background:'linear-gradient(160deg,#0d3d20 0%,#134025 50%,#0a2e17 100%)',
+      background:'#eef6f0',
       padding:'90px 0', position:'relative', overflow:'hidden',
-      borderTop:'1px solid rgba(23,105,57,0.4)',
-      borderBottom:'1px solid rgba(23,105,57,0.3)',
+      borderTop:'1px solid rgba(23,105,57,0.18)',
+      borderBottom:'1px solid rgba(23,105,57,0.18)',
+      boxShadow:'inset 0 1px 0 rgba(16,10,98,0.04), inset 0 -1px 0 rgba(16,10,98,0.04)',
     }}>
       {/* Orbes verdes */}
-      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(23,105,57,0.25) 0%,transparent 65%)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', bottom:'-15%', left:'-8%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.06) 0%,transparent 65%)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', inset:0, backgroundImage:'linear-gradient(rgba(255,244,212,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,244,212,0.03) 1px,transparent 1px)', backgroundSize:'50px 50px', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(23,105,57,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', bottom:'-15%', left:'-8%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', inset:0, backgroundImage:'linear-gradient(rgba(23,105,57,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(23,105,57,0.04) 1px,transparent 1px)', backgroundSize:'50px 50px', pointerEvents:'none' }} />
 
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 clamp(1rem,4vw,3rem)', position:'relative', zIndex:1 }}>
         <motion.div initial={{ opacity:0, y:30 }} animate={inView?{opacity:1,y:0}:{}}
           style={{ textAlign:'center', marginBottom:52 }}>
-          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(255,222,0,0.12)', border:'1px solid rgba(255,222,0,0.35)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
-            <div style={{ width:7, height:7, borderRadius:'50%', background:'#ffde00', animation:'pulseGreen 2s infinite' }} />
-            <span style={{ color:'#ffde00', fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase' }}>Na imprensa & menções</span>
+          <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(23,105,57,0.1)', border:'1px solid rgba(23,105,57,0.3)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
+            <div style={{ width:7, height:7, borderRadius:'50%', background:'var(--green)', animation:'pulseGreen 2s infinite' }} />
+            <span style={{ color:'var(--green)', fontSize:11, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase' }}>Na imprensa & menções</span>
           </div>
-          <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,3.5vw,2.8rem)', fontWeight:700, color:'#fff', lineHeight:1.2, marginBottom:12 }}>
+          <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,3.5vw,2.8rem)', fontWeight:700, color:'var(--navy)', lineHeight:1.2, marginBottom:12 }}>
             O que a mídia diz sobre ele
           </h2>
-          <p style={{ color:'rgba(255,255,255,0.5)', fontSize:15, maxWidth:480, margin:'0 auto' }}>
+          <p style={{ color:'rgba(16,10,98,0.6)', fontSize:15, maxWidth:480, margin:'0 auto' }}>
             Clique em qualquer card para ler a matéria completa.
           </p>
         </motion.div>
