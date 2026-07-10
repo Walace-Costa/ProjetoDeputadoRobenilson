@@ -56,7 +56,7 @@ export default function Hero() {
       <div style={{ position:'absolute', bottom:'-10%', right:'-5%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(26,86,219,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
       <div style={{ position:'absolute', left:0, right:0, height:2, zIndex:1, pointerEvents:'none', background:'linear-gradient(90deg,transparent,rgba(230,59,46,0.3),transparent)', animation:'scanline 6s linear infinite' }} />
 
-      <div style={{ maxWidth:1200, margin:'0 auto', width:'100%', position:'relative', zIndex:2, padding:'120px clamp(1rem,4vw,3rem) 80px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:80, alignItems:'center' }}>
+      <div style={{ maxWidth:1200, margin:'0 auto', width:'100%', position:'relative', zIndex:2, padding: isMobile ? '110px clamp(1rem,4vw,3rem) 60px' : '120px clamp(1rem,4vw,3rem) 80px', display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 48 : 80, alignItems:'center' }}>
         <div>
           <motion.div initial={{ opacity:0, x:-30 }} animate={{ opacity:1, x:0 }} transition={{ duration:0.6, delay:0.2 }}
             style={{ display:'inline-flex', alignItems:'center', gap:8, border:'1px solid rgba(230,59,46,0.4)', borderRadius:999, padding:'5px 14px', marginBottom:28, background:'rgba(230,59,46,0.08)' }}>
