@@ -62,8 +62,8 @@ function InfiniteRow({ items, toLeft = false, speed = 40 }) {
   const edgeW = isMobile ? 32 : 100;
   return (
     <div style={{ overflow:'hidden', position:'relative' }}>
-      <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#021a0e,transparent)', zIndex:2, pointerEvents:'none' }} />
-      <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#021a0e,transparent)', zIndex:2, pointerEvents:'none' }} />
+      <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#0a2e17,transparent)', zIndex:2, pointerEvents:'none' }} />
+      <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#0a2e17,transparent)', zIndex:2, pointerEvents:'none' }} />
       <motion.div
         animate={{ x: toLeft ? [0, -totalW] : [-totalW, 0] }}
         transition={{ duration:speed, repeat:Infinity, ease:'linear', repeatType:'loop' }}
