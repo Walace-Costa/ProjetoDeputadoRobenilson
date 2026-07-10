@@ -78,16 +78,16 @@ export default function Mencoes() {
   const { ref, inView } = useInView({ threshold:0.05, triggerOnce:true });
   return (
     <section id="mencoes" ref={ref} style={{
-      background:'#EEF3EA',
+      background:'linear-gradient(160deg, #1A5C3A 0%, #14472E 50%, #0F3A24 100%)',
       padding:'90px 0', position:'relative', overflow:'hidden',
       borderTop:'1px solid rgba(23,105,57,0.18)',
       borderBottom:'1px solid rgba(23,105,57,0.18)',
-      boxShadow:'inset 0 1px 0 rgba(16,10,98,0.04), inset 0 -1px 0 rgba(16,10,98,0.04)',
+      boxShadow:'inset 0 1px 0 rgba(255,255,255,0.04), inset 0 -1px 0 rgba(0,0,0,0.15)',
     }}>
       {/* Orbes verdes */}
-      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(23,105,57,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', bottom:'-15%', left:'-8%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.1) 0%,transparent 65%)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', inset:0, backgroundImage:'linear-gradient(rgba(23,105,57,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(23,105,57,0.04) 1px,transparent 1px)', backgroundSize:'50px 50px', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', top:'-20%', right:'-10%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle,rgba(23,105,57,0.35) 0%,transparent 65%)', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', bottom:'-15%', left:'-8%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle,rgba(255,222,0,0.12) 0%,transparent 65%)', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', inset:0, backgroundImage:'linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px)', backgroundSize:'50px 50px', pointerEvents:'none' }} />
 
       <div style={{ maxWidth:1200, margin:'0 auto', padding:'0 clamp(1rem,4vw,3rem)', position:'relative', zIndex:1 }}>
         <motion.div initial={{ opacity:0, y:30 }} animate={inView?{opacity:1,y:0}:{}}
