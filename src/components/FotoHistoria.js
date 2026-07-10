@@ -35,8 +35,8 @@ function Card({ m, i }) {
   const textOrder = isMobile ? 1 : (isEven ? 1 : 0);
   return (
     <motion.div ref={ref} initial={{ opacity:0, y:60 }} animate={inView?{opacity:1,y:0}:{}} transition={{ duration:0.7, ease:[0.22,1,0.36,1] }}
-      style={{ display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', minHeight: isMobile ? undefined : 480 }}>
-      <div style={{ order:imgOrder, background:'var(--cream)', position:'relative', overflow:'hidden', minHeight: isMobile ? 320 : 480 }}>
+      style={{ display:'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', minHeight: isMobile ? undefined : 340 }}>
+      <div style={{ order:imgOrder, background:'var(--cream)', position:'relative', overflow:'hidden', minHeight: isMobile ? 280 : 340 }}>
         <div style={{ position:'absolute', inset:0, backgroundImage:`linear-gradient(${m.accent}0c 1px,transparent 1px),linear-gradient(90deg,${m.accent}0c 1px,transparent 1px)`, backgroundSize:'40px 40px', pointerEvents:'none' }} />
         <div style={{ position:'absolute', inset:0, background:`radial-gradient(circle at center,${m.accent}12 0%,transparent 65%)`, pointerEvents:'none' }} />
         <FotoToggle fotoReal={m.fotoReal} avatar={m.avatar} accent={m.accent} />
