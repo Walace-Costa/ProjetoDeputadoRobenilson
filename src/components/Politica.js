@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 const propostas = [
-  { area: 'Infância & Adolescência', titulo: 'Rede municipal de proteção integral', desc: 'Criar uma rede integrada de serviços para crianças e adolescentes em situação de vulnerabilidade, unindo saúde, educação e assistência social.', tag: 'PL', color: '#E63B2E' },
-  { area: 'Transparência', titulo: 'Câmara aberta e transmitida ao vivo', desc: 'Transmissão em tempo real de todas as sessões e divulgação mensal detalhada de gastos do mandato. O cidadão tem direito de saber.', tag: 'Fiscal.', color: '#1A56DB' },
-  { area: 'Conselho Tutelar', titulo: 'Valorização dos conselheiros tutelares', desc: 'Garantir condições dignas de trabalho, formação continuada e reconhecimento institucional para os conselheiros tutelares do município.', tag: 'PL', color: '#F5A623' },
-  { area: 'Políticas Públicas', titulo: 'Plano Municipal da Primeira Infância', desc: 'Elaborar e implementar um plano integrado de políticas públicas para crianças de 0 a 6 anos, alinhado ao Plano Nacional (PNIPI) do MEC.', tag: 'PL', color: '#E63B2E' },
-  { area: 'Educação', titulo: 'Educação em direitos nas escolas', desc: 'Incluir conteúdo sobre direitos da criança e do adolescente (ECA) nas escolas públicas municipais, desde o ensino fundamental.', tag: 'PL', color: '#1A56DB' },
-  { area: 'Fiscalização', titulo: 'Controle de contratos com o município', desc: 'Fiscalizar ativamente contratos públicos e denunciar irregularidades — usando o conhecimento jurídico para proteger o dinheiro público.', tag: 'Fiscal.', color: '#F5A623' },
+  { area: 'Infância & Adolescência', titulo: 'Rede municipal de proteção integral', desc: 'Criar uma rede integrada de serviços para crianças e adolescentes em situação de vulnerabilidade, unindo saúde, educação e assistência social.', tag: 'PL', color: '#db002c' },
+  { area: 'Transparência', titulo: 'Câmara aberta e transmitida ao vivo', desc: 'Transmissão em tempo real de todas as sessões e divulgação mensal detalhada de gastos do mandato. O cidadão tem direito de saber.', tag: 'Fiscal.', color: '#100a62' },
+  { area: 'Conselho Tutelar', titulo: 'Valorização dos conselheiros tutelares', desc: 'Garantir condições dignas de trabalho, formação continuada e reconhecimento institucional para os conselheiros tutelares do município.', tag: 'PL', color: '#176939' },
+  { area: 'Políticas Públicas', titulo: 'Plano Municipal da Primeira Infância', desc: 'Elaborar e implementar um plano integrado de políticas públicas para crianças de 0 a 6 anos, alinhado ao Plano Nacional (PNIPI) do MEC.', tag: 'PL', color: '#db002c' },
+  { area: 'Educação', titulo: 'Educação em direitos nas escolas', desc: 'Incluir conteúdo sobre direitos da criança e do adolescente (ECA) nas escolas públicas municipais, desde o ensino fundamental.', tag: 'PL', color: '#100a62' },
+  { area: 'Fiscalização', titulo: 'Controle de contratos com o município', desc: 'Fiscalizar ativamente contratos públicos e denunciar irregularidades — usando o conhecimento jurídico para proteger o dinheiro público.', tag: 'Fiscal.', color: '#176939' },
 ];
 export default function Politica() {
   const { ref, inView } = useInView({ threshold: 0.05, triggerOnce: true });
