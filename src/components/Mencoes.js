@@ -27,24 +27,24 @@ function Card({ m }) {
     <a href={m.url} target="_blank" rel="noopener noreferrer"
       style={{ textDecoration:'none', display:'block', flexShrink:0, width:300 }}>
       <motion.div whileHover={{ y:-6, borderColor:m.tagColor, boxShadow:`0 12px 40px ${m.tagColor}30` }}
-        style={{ background:'rgba(255,255,255,0.03)', border:'1px solid rgba(255,255,255,0.07)', borderRadius:14, overflow:'hidden', transition:'border-color 0.25s, box-shadow 0.25s', height:'100%', cursor:'pointer', position:'relative' }}>
+        style={{ background:'#fdfbf3', border:'1px solid rgba(16,10,98,0.08)', borderRadius:14, overflow:'hidden', boxShadow:'0 2px 10px rgba(16,10,98,0.05)', transition:'border-color 0.25s, box-shadow 0.25s', height:'100%', cursor:'pointer', position:'relative' }}>
         <div style={{ height:3, background:`linear-gradient(90deg,${m.tagColor},${m.tagColor}55,transparent)` }} />
         {m.img ? (
-          <div style={{ height:120, overflow:'hidden', background:'#0a2e17' }}>
-            <img src={m.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.65 }} onError={e=>{e.target.parentNode.style.display='none';}} />
+          <div style={{ height:120, overflow:'hidden', background:'var(--cream)' }}>
+            <img src={m.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.9 }} onError={e=>{e.target.parentNode.style.display='none';}} />
           </div>
         ) : (
-          <div style={{ height:64, background:`linear-gradient(135deg,${m.tagColor}12,transparent)`, display:'flex', alignItems:'center', justifyContent:'center' }}>
+          <div style={{ height:64, background:`linear-gradient(135deg,${m.tagColor}14,transparent)`, display:'flex', alignItems:'center', justifyContent:'center' }}>
             <span style={{ fontSize:28 }}>📰</span>
           </div>
         )}
         <div style={{ padding:'14px 16px 18px' }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
-            <span style={{ color:'rgba(255,255,255,0.35)', fontSize:10 }}>{m.veiculo} · {m.data}</span>
-            <span style={{ background:`${m.tagColor}22`, color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
+            <span style={{ color:'rgba(16,10,98,0.5)', fontSize:10 }}>{m.veiculo} · {m.data}</span>
+            <span style={{ background:`${m.tagColor}1f`, color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
           </div>
-          <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'#fff', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
-          <p style={{ color:'rgba(255,255,255,0.38)', fontSize:11, lineHeight:1.6, marginBottom:12 }}>{m.resumo}</p>
+          <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'var(--navy)', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
+          <p style={{ color:'rgba(16,10,98,0.55)', fontSize:11, lineHeight:1.6, marginBottom:12 }}>{m.resumo}</p>
           <div style={{ display:'flex', alignItems:'center', gap:5, color:m.tagColor, fontSize:11, fontWeight:600 }}>
             Ler matéria
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
