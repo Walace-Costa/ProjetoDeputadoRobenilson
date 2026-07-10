@@ -64,12 +64,12 @@ function Card({ m, i }) {
 export default function FotoHistoria() {
   return (
     <section id="foto-historia" style={{ background:'var(--dark)' }}>
-      <div style={{ background:'linear-gradient(135deg,#0a1020,#0d1828)', padding:'80px clamp(1rem,4vw,3rem) 72px', textAlign:'center', borderBottom:'1px solid rgba(230,59,46,0.12)' }}>
-        <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(230,59,46,0.1)', border:'1px solid rgba(230,59,46,0.25)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
+      <div style={{ background:'var(--cream)', padding:'80px clamp(1rem,4vw,3rem) 72px', textAlign:'center', borderBottom:'1px solid rgba(219,0,44,0.15)' }}>
+        <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(219,0,44,0.1)', border:'1px solid rgba(219,0,44,0.25)', borderRadius:999, padding:'5px 14px', marginBottom:20 }}>
           <div style={{ width:6, height:6, borderRadius:'50%', background:'var(--red)' }} />
           <span style={{ color:'var(--red)', fontSize:11, fontWeight:600, letterSpacing:'0.1em', textTransform:'uppercase' }}>A história dele</span>
         </div>
-        <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,4vw,3rem)', fontWeight:700, color:'#fff', lineHeight:1.2, maxWidth:600, margin:'0 auto' }}>
+        <h2 style={{ fontFamily:'var(--serif)', fontSize:'clamp(2rem,4vw,3rem)', fontWeight:700, color:'var(--navy)', lineHeight:1.2, maxWidth:600, margin:'0 auto' }}>
           Uma trajetória construída com propósito
         </h2>
       </div>
