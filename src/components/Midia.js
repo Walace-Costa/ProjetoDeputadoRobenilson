@@ -96,7 +96,7 @@ function CardNormal({ m, i }) {
 
       {/* Imagem topo */}
       {m.img && (
-        <div style={{ height: 140, overflow: 'hidden', background: '#fff4d4' }}>
+        <div style={{ height: 140, overflow: 'hidden', background: 'var(--cream)' }}>
           <img src={m.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }} />
         </div>
       )}
