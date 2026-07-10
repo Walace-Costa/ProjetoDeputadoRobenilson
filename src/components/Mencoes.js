@@ -40,12 +40,12 @@ function Card({ m }) {
         )}
         <div style={{ padding:'14px 16px 18px' }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
-            <span style={{ color:'rgba(255,255,255,0.4)', fontSize:10 }}>{m.veiculo} · {m.data}</span>
-            <span style={{ background:'rgba(255,255,255,0.92)', color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
+            <span style={{ color:'rgba(15,27,76,0.55)', fontSize:10 }}>{m.veiculo} · {m.data}</span>
+            <span style={{ background:'rgba(255,255,255,0.85)', color:m.tagColor, fontSize:10, fontWeight:700, padding:'3px 8px', borderRadius:999, whiteSpace:'nowrap' }}>{m.tag}</span>
           </div>
-          <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'#FFFFFF', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
-          <p style={{ color:'rgba(255,255,255,0.6)', fontSize:11, lineHeight:1.6, marginBottom:12 }}>{m.resumo}</p>
-          <div style={{ display:'flex', alignItems:'center', gap:5, color:'#FFFFFF', fontSize:11, fontWeight:600 }}>
+          <h4 style={{ fontFamily:'var(--serif)', fontSize:13, fontWeight:700, color:'#0F1B4C', lineHeight:1.4, marginBottom:8 }}>{m.titulo}</h4>
+          <p style={{ color:'rgba(15,27,76,0.75)', fontSize:11, lineHeight:1.6, marginBottom:12 }}>{m.resumo}</p>
+          <div style={{ display:'flex', alignItems:'center', gap:5, color:'#0F1B4C', fontSize:11, fontWeight:600 }}>
             Ler matéria
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </div>
