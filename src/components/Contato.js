@@ -45,6 +45,7 @@ export default function Contato() {
   const [form, setForm] = useState({ nome: '', mensagem: '' });
   const [enviado, setEnviado] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const isMobile = useMediaQuery('(max-width: 860px)');
 
   const enviarWhatsapp = () => {
     if (!form.nome || !form.mensagem) return;
