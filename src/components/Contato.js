@@ -117,7 +117,7 @@ export default function Contato() {
           </motion.div>
         </div>
       </div>
-      <style>{`.contato-input::placeholder{color:rgba(16,10,98,0.45);opacity:1}`}</style>
+      <style>{`.contato-input::placeholder{color:#8a8a8a;opacity:1}.contato-input:focus{border-color:var(--navy)!important;box-shadow:0 0 0 3px rgba(16,10,98,0.1)}`}</style>
     </section>
   );
 }
