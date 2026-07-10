@@ -81,32 +81,32 @@ export default function Contato() {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.15 }}
-            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 20, padding: '40px 36px', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--red),var(--blue))' }} />
+            style={{ background: '#ffffff', border: '1px solid rgba(16,10,98,0.08)', borderRadius: 20, padding: '40px 36px', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--red),var(--navy))' }} />
             {enviado ? (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                <CheckIcon width={48} height={48} style={{ color: '#25D366', marginBottom: 16 }} />
-                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, color: '#fff', marginBottom: 12 }}>Quase lá!</h3>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>Abrimos o WhatsApp com sua mensagem pronta. É só confirmar o envio por lá.</p>
+                <CheckIcon width={48} height={48} style={{ color: '#176939', marginBottom: 16 }} />
+                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, color: 'var(--navy)', marginBottom: 12 }}>Quase lá!</h3>
+                <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 14 }}>Abrimos o WhatsApp com sua mensagem pronta. É só confirmar o envio por lá.</p>
               </div>
             ) : (
               <>
-                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, color: '#fff', marginBottom: 28 }}>Deixe sua mensagem</h3>
+                <h3 style={{ fontFamily: 'var(--serif)', fontSize: 22, color: 'var(--navy)', marginBottom: 28 }}>Deixe sua mensagem</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {[{ id: 'nome', label: 'Seu nome', type: 'text', ph: 'João da Silva' }].map(f => (
                     <div key={f.id}>
-                      <label style={{ display: 'block', fontSize: 12, fontWeight: 500, color: 'rgba(255,255,255,0.5)', marginBottom: 6 }}>{f.label}</label>
+                      <label style={{ display: 'block', fontSize: 12, fontWeight: 500, color: 'rgba(16,10,98,0.6)', marginBottom: 6 }}>{f.label}</label>
                       <input type={f.type} placeholder={f.ph} required value={form[f.id]} onChange={e => setForm({ ...form, [f.id]: e.target.value })}
-                        style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, fontSize: 14, background: 'rgba(255,255,255,0.05)', color: '#fff', outline: 'none', fontFamily: 'var(--sans)' }} />
+                        style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(16,10,98,0.15)', borderRadius: 8, fontSize: 14, background: 'var(--bg)', color: 'var(--navy)', outline: 'none', fontFamily: 'var(--sans)' }} />
                     </div>
                   ))}
                   <div>
-                    <label style={{ display: 'block', fontSize: 12, fontWeight: 500, color: 'rgba(255,255,255,0.5)', marginBottom: 6 }}>Mensagem</label>
+                    <label style={{ display: 'block', fontSize: 12, fontWeight: 500, color: 'rgba(16,10,98,0.6)', marginBottom: 6 }}>Mensagem</label>
                     <textarea placeholder="Escreva sua mensagem..." required rows={4} value={form.mensagem} onChange={e => setForm({ ...form, mensagem: e.target.value })}
-                      style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, fontSize: 14, background: 'rgba(255,255,255,0.05)', color: '#fff', resize: 'vertical', outline: 'none', fontFamily: 'var(--sans)' }} />
+                      style={{ width: '100%', padding: '12px 14px', border: '1px solid rgba(16,10,98,0.15)', borderRadius: 8, fontSize: 14, background: 'var(--bg)', color: 'var(--navy)', resize: 'vertical', outline: 'none', fontFamily: 'var(--sans)' }} />
                   </div>
                   <motion.button onClick={enviarWhatsapp} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
-                    style={{ background: 'linear-gradient(135deg,var(--red),#c0392b)', color: '#fff', border: 'none', borderRadius: 8, padding: '14px', fontSize: 14, fontWeight: 700, cursor: 'pointer', boxShadow: '0 6px 30px var(--red-glow)', marginTop: 4 }}>
+                    style={{ background: 'var(--gold)', color: 'var(--navy)', border: 'none', borderRadius: 8, padding: '14px', fontSize: 14, fontWeight: 700, cursor: 'pointer', boxShadow: '0 6px 30px var(--gold-glow)', marginTop: 4 }}>
                     Enviar mensagem pelo WhatsApp
                   </motion.button>
                 </div>
