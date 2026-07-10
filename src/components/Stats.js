@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 const items = [
   { num:15, suffix:'+', label:'Anos de atuação social', color:'#E63B2E' },
   { num:60, suffix:'', label:'Delegados baianos em Brasília', color:'#10B959' },
