@@ -28,7 +28,7 @@ export default function Navbar() {
   useEffect(() => { if (!isMobile) setMenuOpen(false); }, [isMobile]);
 
   return (
-    <motion.nav className="navbar-texture" initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
+    <motion.nav initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
         background: scrolled ? '#132FA8' : '#0C2490',
@@ -36,6 +36,14 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.15)' : 'none',
         transition: 'all 0.4s ease', padding: '0 clamp(1rem,4vw,3rem)',
       }}>
+      <div aria-hidden="true" style={{
+        position: 'absolute', inset: 0, zIndex: -1, pointerEvents: 'none',
+        backgroundImage: 'url(/formas.png)',
+        backgroundRepeat: 'repeat-x', backgroundPosition: '0 6px', backgroundSize: 'auto 56px',
+        opacity: 0.2, mixBlendMode: 'multiply',
+        WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,0.4) 36%, rgba(0,0,0,0.4) 64%, rgba(0,0,0,1) 82%, rgba(0,0,0,1) 100%)',
+        maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,0.4) 36%, rgba(0,0,0,0.4) 64%, rgba(0,0,0,1) 82%, rgba(0,0,0,1) 100%)',
+      }} />
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
           <img src="/newLogoo.png" alt="Robenilson Torres" style={{ height: 72, width: 'auto', display: 'block', flexShrink: 0 }} />
