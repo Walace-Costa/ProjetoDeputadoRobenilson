@@ -59,20 +59,14 @@ export default function Hero() {
         {/* Foto real no cartão */}
         <motion.div initial={{ opacity:0, x:50, scale:0.95 }} animate={{ opacity:1, x:0, scale:1 }} transition={{ duration:0.9, delay:0.5 }} style={{ display:'flex', justifyContent:'center' }}>
           <motion.div animate={{ y:[0,-12,0] }} transition={{ duration:5, repeat:Infinity, ease:'easeInOut' }}
-            style={{ background:'#0F1B4C', border:'1px solid rgba(255,255,255,0.08)', borderRadius:24, padding:'38px 34px', textAlign:'center', width:'100%', maxWidth:370, boxShadow:'0 20px 60px rgba(15,27,76,0.25), 0 4px 16px rgba(15,27,76,0.15)', position:'relative', overflow:'hidden' }}>
-            <div style={{ position:'absolute', top:'50%', left:'50%', width:320, height:320, marginLeft:-160, marginTop:-160, borderRadius:'50%', border:'1px solid transparent', borderTopColor:'rgba(219,0,44,0.35)', borderRightColor:'rgba(255,255,255,0.15)', animation:'rotateRing 8s linear infinite', pointerEvents:'none' }} />
+            style={{ border:'1px solid rgba(15,27,76,0.1)', borderRadius:24, width:'100%', maxWidth:370, aspectRatio:'3/4', boxShadow:'0 20px 60px rgba(15,27,76,0.25), 0 4px 16px rgba(15,27,76,0.15)', position:'relative', overflow:'hidden' }}>
+            <img src="/newProfile3.jpeg" alt="Robenilson Torres" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
 
-            {/* Foto real terno verde */}
-            <div style={{ width:185, height:220, borderRadius:14, margin:'0 auto 20px', overflow:'hidden', border:'2px solid rgba(219,0,44,0.35)', position:'relative' }}>
-              <img src="/newProfile3.jpeg" alt="Robenilson Torres" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
-            </div>
-
-            <div style={{ color:'#FFFFFF', fontSize:18, fontWeight:700, marginBottom:4, fontFamily:'var(--serif)' }}>Robenilson Torres</div>
-            <div style={{ fontSize:11, letterSpacing:'0.08em', marginBottom:4, color:'#E8899B', fontWeight:600 }}>OAB/BA · Presidente ACTEBA</div>
-            <div style={{ color:'rgba(255,255,255,0.5)', fontSize:11, marginBottom:20 }}>Itabuna, Bahia</div>
-
-            <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(219,0,44,0.12)', border:'1px solid rgba(219,0,44,0.3)', borderRadius:999, padding:'6px 14px' }}>
-              <span style={{ color:'var(--red)', fontSize:12, fontWeight:700 }}>#BoraPraALBA</span>
+            <div style={{ position:'absolute', left:0, right:0, bottom:0, padding:'60px 24px 22px', background:'linear-gradient(to top, rgba(10,8,40,0.88) 0%, rgba(10,8,40,0.55) 55%, transparent 100%)' }}>
+              <div style={{ color:'#FFFFFF', fontSize:19, fontWeight:700, marginBottom:12, fontFamily:'var(--serif)', textShadow:'0 2px 8px rgba(0,0,0,0.4)' }}>Robenilson Torres</div>
+              <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(255,222,0,0.18)', border:'1px solid rgba(255,222,0,0.4)', borderRadius:999, padding:'6px 14px' }}>
+                <span style={{ color:'var(--gold)', fontSize:12, fontWeight:700 }}>#BoraPraALBA</span>
+              </div>
             </div>
           </motion.div>
         </motion.div>
