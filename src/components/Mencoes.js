@@ -153,6 +153,7 @@ function MobileCarousel({ items }) {
 
 export default function Mencoes() {
   const { ref, inView } = useInView({ threshold:0.05, triggerOnce:true });
+  const isMobile = useMediaQuery('(max-width: 767px)');
   return (
     <section id="mencoes" ref={ref} style={{
       background:'linear-gradient(160deg, #2A459A 0%, #1B316E 50%, #101B4A 100%)',
