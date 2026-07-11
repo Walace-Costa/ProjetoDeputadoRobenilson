@@ -56,7 +56,7 @@ export default function Navbar() {
             {links.map(l => (
               isHome ? (
                 <motion.a key={l.href} href={l.href} whileHover={{ color: '#D4A017' }}
-                  style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 13 }}>
+                  style={{ color: '#fff', textDecoration: 'none', fontSize: 13 }}>
                   {l.label}
                 </motion.a>
               ) : (
