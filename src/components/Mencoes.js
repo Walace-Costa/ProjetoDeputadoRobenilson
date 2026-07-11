@@ -55,21 +55,68 @@ function Card({ m, style }) {
   );
 }
 
+function ArrowButton({ dir, onClick }) {
+  const isLeft = dir === 'left';
+  return (
+    <button type="button" onClick={onClick} aria-label={isLeft ? 'Anterior' : 'Próximo'}
+      style={{
+        position:'absolute', top:'50%', [isLeft ? 'left' : 'right']:6, transform:'translateY(-50%)',
+        zIndex:3, width:40, height:40, borderRadius:'50%', border:'1px solid rgba(255,255,255,0.3)',
+        background:'rgba(16,10,98,0.5)', backdropFilter:'blur(6px)', WebkitBackdropFilter:'blur(6px)',
+        color:'#fff', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', padding:0,
+      }}>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+        {isLeft ? <polyline points="15 18 9 12 15 6" /> : <polyline points="9 18 15 12 9 6" />}
+      </svg>
+    </button>
+  );
+}
+
 function InfiniteRow({ items, toLeft = false, speed = 40 }) {
   const cardW = 316;
   const totalW = (items.length / 2) * cardW;
-  const isMobile = useMediaQuery('(max-width: 640px)');
-  const edgeW = isMobile ? 32 : 100;
+  const isSmall = useMediaQuery('(max-width: 640px)');
+  const isMobile = useMediaQuery('(max-width: 767px)');
+  const edgeW = isSmall ? 32 : 100;
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollRef = useRef(null);
+
+  const scrollByCard = (dir) => {
+    scrollRef.current?.scrollBy({ left: dir * cardW, behavior: 'smooth' });
+  };
+
+  if (isMobile) {
+    const singlePass = items.slice(0, items.length / 2);
+    return (
+      <div style={{ position:'relative' }}>
+        <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
+        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
+        <div ref={scrollRef}
+          style={{ display:'flex', gap:16, overflowX:'auto', scrollSnapType:'x mandatory', WebkitOverflowScrolling:'touch', paddingBottom:4 }}>
+          {singlePass.map((m,i) => <Card key={i} m={m} style={{ scrollSnapAlign:'start' }} />)}
+        </div>
+        <ArrowButton dir="left" onClick={() => scrollByCard(-1)} />
+        <ArrowButton dir="right" onClick={() => scrollByCard(1)} />
+      </div>
+    );
+  }
+
   return (
-    <div style={{ overflow:'hidden', position:'relative' }}>
+    <div style={{ overflow:'hidden', position:'relative' }}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}>
       <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
       <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
-      <motion.div
-        animate={{ x: toLeft ? [0, -totalW] : [-totalW, 0] }}
-        transition={{ duration:speed, repeat:Infinity, ease:'linear', repeatType:'loop' }}
-        style={{ display:'flex', gap:16, width:'max-content', paddingBottom:4 }}>
+      <div
+        style={{
+          display:'flex', gap:16, width:'max-content', paddingBottom:4,
+          '--mencoesScrollDist': `-${totalW}px`,
+          animationName:'mencoesScroll', animationDuration:`${speed}s`, animationTimingFunction:'linear',
+          animationIterationCount:'infinite', animationDirection: toLeft ? 'normal' : 'reverse',
+          animationPlayState: isPaused ? 'paused' : 'running',
+        }}>
         {items.map((m,i) => <Card key={i} m={m} />)}
-      </motion.div>
+      </div>
     </div>
   );
 }
