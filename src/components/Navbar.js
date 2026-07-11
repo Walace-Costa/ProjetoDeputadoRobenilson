@@ -44,12 +44,14 @@ export default function Navbar() {
       }}>
       {showEdgeArt && (
         <>
-          <div aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: EDGE_ART_WIDTH, overflow: 'hidden', pointerEvents: 'none' }}>
-            <img src="/formas.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'left center', display: 'block' }} />
-          </div>
-          <div aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: EDGE_ART_WIDTH, overflow: 'hidden', pointerEvents: 'none' }}>
-            <img src="/formas.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right center', display: 'block' }} />
-          </div>
+          <div aria-hidden="true" style={{
+            position: 'absolute', top: 0, bottom: 0, left: 0, width: EDGE_ART_WIDTH, pointerEvents: 'none',
+            backgroundImage: 'url(/formas.png)', backgroundRepeat: 'repeat-x', backgroundSize: 'auto 100%', backgroundPosition: 'left center',
+          }} />
+          <div aria-hidden="true" style={{
+            position: 'absolute', top: 0, bottom: 0, right: 0, width: EDGE_ART_WIDTH, pointerEvents: 'none',
+            backgroundImage: 'url(/formas.png)', backgroundRepeat: 'repeat-x', backgroundSize: 'auto 100%', backgroundPosition: 'right center',
+          }} />
         </>
       )}
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
