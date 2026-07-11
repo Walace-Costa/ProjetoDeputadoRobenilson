@@ -55,15 +55,17 @@ function Card({ m, style }) {
   );
 }
 
-function ArrowButton({ dir, onClick }) {
+function ArrowButton({ dir, onClick, disabled }) {
   const isLeft = dir === 'left';
   return (
-    <button type="button" onClick={onClick} aria-label={isLeft ? 'Anterior' : 'Próximo'}
+    <button type="button" onClick={onClick} disabled={disabled} aria-label={isLeft ? 'Anterior' : 'Próximo'}
       style={{
         position:'absolute', top:'50%', [isLeft ? 'left' : 'right']:6, transform:'translateY(-50%)',
         zIndex:3, width:40, height:40, borderRadius:'50%', border:'1px solid rgba(255,255,255,0.3)',
         background:'rgba(16,10,98,0.5)', backdropFilter:'blur(6px)', WebkitBackdropFilter:'blur(6px)',
-        color:'#fff', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', padding:0,
+        color:'#fff', display:'flex', alignItems:'center', justifyContent:'center',
+        cursor: disabled ? 'default' : 'pointer', padding:0,
+        opacity: disabled ? 0 : 1, pointerEvents: disabled ? 'none' : 'auto', transition:'opacity 0.25s',
       }}>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
         {isLeft ? <polyline points="15 18 9 12 15 6" /> : <polyline points="9 18 15 12 9 6" />}
@@ -75,31 +77,8 @@ function ArrowButton({ dir, onClick }) {
 function InfiniteRow({ items, toLeft = false, speed = 40 }) {
   const cardW = 316;
   const totalW = (items.length / 2) * cardW;
-  const isSmall = useMediaQuery('(max-width: 640px)');
-  const isMobile = useMediaQuery('(max-width: 767px)');
-  const edgeW = isSmall ? 32 : 100;
+  const edgeW = 100;
   const [isPaused, setIsPaused] = useState(false);
-  const scrollRef = useRef(null);
-
-  const scrollByCard = (dir) => {
-    scrollRef.current?.scrollBy({ left: dir * cardW, behavior: 'smooth' });
-  };
-
-  if (isMobile) {
-    const singlePass = items.slice(0, items.length / 2);
-    return (
-      <div style={{ position:'relative' }}>
-        <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
-        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
-        <div ref={scrollRef}
-          style={{ display:'flex', gap:16, overflowX:'auto', scrollSnapType:'x mandatory', WebkitOverflowScrolling:'touch', paddingBottom:4 }}>
-          {singlePass.map((m,i) => <Card key={i} m={m} style={{ scrollSnapAlign:'start' }} />)}
-        </div>
-        <ArrowButton dir="left" onClick={() => scrollByCard(-1)} />
-        <ArrowButton dir="right" onClick={() => scrollByCard(1)} />
-      </div>
-    );
-  }
 
   return (
     <div style={{ overflow:'hidden', position:'relative' }}
@@ -116,6 +95,57 @@ function InfiniteRow({ items, toLeft = false, speed = 40 }) {
           animationPlayState: isPaused ? 'paused' : 'running',
         }}>
         {items.map((m,i) => <Card key={i} m={m} />)}
+      </div>
+    </div>
+  );
+}
+
+function MobileCarousel({ items }) {
+  const scrollRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const scrollToIndex = (idx) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const clamped = Math.max(0, Math.min(items.length - 1, idx));
+    const card = container.children[clamped];
+    if (!card) return;
+    const left = card.offsetLeft - (container.clientWidth - card.clientWidth) / 2;
+    container.scrollTo({ left, behavior:'smooth' });
+  };
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const center = container.scrollLeft + container.clientWidth / 2;
+    let closest = 0, closestDist = Infinity;
+    Array.from(container.children).forEach((child, i) => {
+      const dist = Math.abs((child.offsetLeft + child.clientWidth / 2) - center);
+      if (dist < closestDist) { closestDist = dist; closest = i; }
+    });
+    setActiveIndex(closest);
+  };
+
+  return (
+    <div style={{ position:'relative' }}>
+      <div ref={scrollRef} onScroll={handleScroll}
+        style={{ display:'flex', overflowX:'auto', scrollSnapType:'x mandatory', WebkitOverflowScrolling:'touch', padding:'4px 0' }}>
+        {items.map((m,i) => (
+          <div key={i} style={{ flex:'0 0 100%', scrollSnapAlign:'center', padding:'0 16px', boxSizing:'border-box' }}>
+            <Card m={m} style={{ width:'100%', maxWidth:340, margin:'0 auto' }} />
+          </div>
+        ))}
+      </div>
+      <ArrowButton dir="left" onClick={() => scrollToIndex(activeIndex - 1)} disabled={activeIndex === 0} />
+      <ArrowButton dir="right" onClick={() => scrollToIndex(activeIndex + 1)} disabled={activeIndex === items.length - 1} />
+      <div style={{ display:'flex', justifyContent:'center', flexWrap:'wrap', gap:7, marginTop:18 }}>
+        {items.map((_,i) => (
+          <button key={i} type="button" onClick={() => scrollToIndex(i)} aria-label={`Ir para menção ${i + 1}`}
+            style={{
+              width: i === activeIndex ? 20 : 7, height:7, borderRadius:999, border:'none', padding:0, cursor:'pointer',
+              background: i === activeIndex ? 'var(--gold)' : 'rgba(255,255,255,0.3)', transition:'width 0.25s, background 0.25s',
+            }} />
+        ))}
       </div>
     </div>
   );
