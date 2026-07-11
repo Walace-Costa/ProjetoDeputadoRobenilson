@@ -31,7 +31,7 @@ export default function Navbar() {
     <motion.nav initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
-        background: scrolled ? '#241E76' : 'var(--navy)',
+        background: scrolled ? '#132FA8' : '#0C2490',
         borderBottom: '1px solid rgba(255,255,255,0.1)',
         boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.15)' : 'none',
         transition: 'all 0.4s ease', padding: '0 clamp(1rem,4vw,3rem)',
