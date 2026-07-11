@@ -64,7 +64,7 @@ export default function Hero() {
 
             {/* Foto real terno verde */}
             <div style={{ width:185, height:220, borderRadius:14, margin:'0 auto 20px', overflow:'hidden', border:'2px solid rgba(219,0,44,0.35)', position:'relative' }}>
-              <img src="/newProfile2.jpeg" alt="Robenilson Torres" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
+              <img src="/newProfile3.jpeg" alt="Robenilson Torres" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
             </div>
 
             <div style={{ color:'#FFFFFF', fontSize:18, fontWeight:700, marginBottom:4, fontFamily:'var(--serif)' }}>Robenilson Torres</div>
