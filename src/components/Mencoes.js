@@ -183,15 +183,23 @@ export default function Mencoes() {
         </motion.div>
       </div>
 
-      {/* Fileira 1 → */}
-      <motion.div initial={{ opacity:0, x:-20 }} animate={inView?{opacity:1,x:0}:{}} transition={{ delay:0.2 }} style={{ marginBottom:16 }}>
-        <InfiniteRow items={row1} toLeft={true} speed={45} />
-      </motion.div>
+      {isMobile ? (
+        <motion.div initial={{ opacity:0, y:20 }} animate={inView?{opacity:1,y:0}:{}} transition={{ delay:0.2 }}>
+          <MobileCarousel items={mencoes} />
+        </motion.div>
+      ) : (
+        <>
+          {/* Fileira 1 → */}
+          <motion.div initial={{ opacity:0, x:-20 }} animate={inView?{opacity:1,x:0}:{}} transition={{ delay:0.2 }} style={{ marginBottom:16 }}>
+            <InfiniteRow items={row1} toLeft={true} speed={45} />
+          </motion.div>
 
-      {/* Fileira 2 ← */}
-      <motion.div initial={{ opacity:0, x:20 }} animate={inView?{opacity:1,x:0}:{}} transition={{ delay:0.35 }}>
-        <InfiniteRow items={row2} toLeft={false} speed={38} />
-      </motion.div>
+          {/* Fileira 2 ← */}
+          <motion.div initial={{ opacity:0, x:20 }} animate={inView?{opacity:1,x:0}:{}} transition={{ delay:0.35 }}>
+            <InfiniteRow items={row2} toLeft={false} speed={38} />
+          </motion.div>
+        </>
+      )}
 
       {/* Contador */}
       <motion.div initial={{ opacity:0 }} animate={inView?{opacity:1}:{}} transition={{ delay:0.5 }}
