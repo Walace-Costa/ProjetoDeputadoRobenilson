@@ -26,3 +26,16 @@ body { font-family: var(--sans); background: var(--bg); color: var(--navy); -web
 @keyframes rotateRing { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
 @keyframes glitch1 { 0%,100%{clip-path:inset(0 0 95% 0);transform:translateX(-3px)} 40%{clip-path:inset(60% 0 20% 0);transform:translateX(3px)} 80%{clip-path:inset(80% 0 5% 0);transform:translateX(-1px)} }
 @keyframes glitch2 { 0%,100%{clip-path:inset(80% 0 5% 0);transform:translateX(3px)} 40%{clip-path:inset(50% 0 30% 0);transform:translateX(-3px)} 80%{clip-path:inset(5% 0 90% 0);transform:translateX(1px)} }
+
+.navbar-texture { position: relative; }
+.navbar-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--formas-bg);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  opacity: 0.32;
+}
