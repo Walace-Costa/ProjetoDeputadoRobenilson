@@ -38,7 +38,7 @@ export default function Navbar() {
       }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
-          <img src="/logov2.png" alt="Robenilson Torres" style={{ height: 38, width: 'auto', display: 'block', flexShrink: 0 }} />
+          <img src="/newLogoo.png" alt="Robenilson Torres" style={{ height: 38, width: 'auto', display: 'block', flexShrink: 0 }} />
           <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: '#F5D77E' }}>
             Deputado Estadual · Bahia 2026
           </div>
