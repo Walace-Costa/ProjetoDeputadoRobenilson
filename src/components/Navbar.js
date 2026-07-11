@@ -62,13 +62,6 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {showEdgeArt && (
-          <div aria-hidden="true" style={{
-            alignSelf: 'stretch', flexShrink: 0, width: 26, pointerEvents: 'none',
-            backgroundImage: 'url(/formas.png)', backgroundRepeat: 'repeat-x', backgroundSize: 'auto 100%', backgroundPosition: 'center',
-          }} />
-        )}
-
         {isMobile ? (
           <button onClick={() => setMenuOpen(v => !v)} aria-label="Abrir menu" aria-expanded={menuOpen}
             style={{ background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5, padding: 8, width: 40, height: 40 }}>
