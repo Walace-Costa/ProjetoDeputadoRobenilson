@@ -59,11 +59,11 @@ export default function Hero() {
         {/* Foto real no cartão */}
         <motion.div initial={{ opacity:0, x:50, scale:0.95 }} animate={{ opacity:1, x:0, scale:1 }} transition={{ duration:0.9, delay:0.5 }} style={{ display:'flex', justifyContent:'center' }}>
           <motion.div animate={{ y:[0,-12,0] }} transition={{ duration:5, repeat:Infinity, ease:'easeInOut' }}
-            style={{ background:'#0F1B4C', border:'1px solid rgba(255,255,255,0.08)', borderRadius:24, padding:'32px 28px', textAlign:'center', width:'100%', maxWidth:320, boxShadow:'0 20px 60px rgba(15,27,76,0.25), 0 4px 16px rgba(15,27,76,0.15)', position:'relative', overflow:'hidden' }}>
-            <div style={{ position:'absolute', top:'50%', left:'50%', width:280, height:280, marginLeft:-140, marginTop:-140, borderRadius:'50%', border:'1px solid transparent', borderTopColor:'rgba(219,0,44,0.35)', borderRightColor:'rgba(255,255,255,0.15)', animation:'rotateRing 8s linear infinite', pointerEvents:'none' }} />
+            style={{ background:'#0F1B4C', border:'1px solid rgba(255,255,255,0.08)', borderRadius:24, padding:'38px 34px', textAlign:'center', width:'100%', maxWidth:370, boxShadow:'0 20px 60px rgba(15,27,76,0.25), 0 4px 16px rgba(15,27,76,0.15)', position:'relative', overflow:'hidden' }}>
+            <div style={{ position:'absolute', top:'50%', left:'50%', width:320, height:320, marginLeft:-160, marginTop:-160, borderRadius:'50%', border:'1px solid transparent', borderTopColor:'rgba(219,0,44,0.35)', borderRightColor:'rgba(255,255,255,0.15)', animation:'rotateRing 8s linear infinite', pointerEvents:'none' }} />
 
             {/* Foto real terno verde */}
-            <div style={{ width:160, height:190, borderRadius:14, margin:'0 auto 20px', overflow:'hidden', border:'2px solid rgba(219,0,44,0.35)', position:'relative' }}>
+            <div style={{ width:185, height:220, borderRadius:14, margin:'0 auto 20px', overflow:'hidden', border:'2px solid rgba(219,0,44,0.35)', position:'relative' }}>
               <img src="/newProfile2.jpeg" alt="Robenilson Torres" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
             </div>
 
