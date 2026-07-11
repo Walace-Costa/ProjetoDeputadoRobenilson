@@ -22,7 +22,7 @@ const CATEGORIAS = ['Educação', 'Meio Ambiente', 'Vida Política', 'Advocacia 
 const ACCENTS = [PALETTE.gold, PALETTE.wine, PALETTE.olive, PALETTE.navy];
 const CATEGORIA_COR = Object.fromEntries(CATEGORIAS.map((c, i) => [c, ACCENTS[i % ACCENTS.length]]));
 const ASPECTS = [0.75, 1, 1.3, 0.85, 1.15, 0.95];
-const TOTAL_FOTOS = 53;
+const TOTAL_FOTOS = 71;
 
 // Edite a categoria e a legenda de cada foto abaixo conforme o conteúdo real de cada imagem
 const fotos = Array.from({ length: TOTAL_FOTOS }, (_, i) => {
