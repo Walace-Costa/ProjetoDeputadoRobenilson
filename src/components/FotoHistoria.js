@@ -184,6 +184,27 @@ export default function FotoHistoria() {
         </h2>
       </div>
       {isMobile ? <HistoriaMobile /> : <HistoriaDesktop />}
+
+      <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.6 }}
+        style={{ maxWidth: 1200, margin: '0 auto', padding: isMobile ? '0 clamp(1rem,5vw,2rem) 64px' : '0 clamp(1rem,4vw,3rem) 88px' }}>
+        <div style={{ background: 'linear-gradient(120deg, var(--navy), #241E76)', borderRadius: 24, padding: isMobile ? '36px 24px' : '48px 56px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap', boxShadow: '0 24px 60px rgba(16,10,98,0.25)', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: '-30%', right: '-8%', width: 260, height: 260, borderRadius: '50%', background: 'radial-gradient(circle,rgba(255,222,0,0.15) 0%,transparent 65%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.3rem,2.6vw,1.8rem)', fontWeight: 700, color: '#fff', marginBottom: 8 }}>
+              Quer ver mais da trajetória dele?
+            </h3>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, maxWidth: 420 }}>
+              Uma galeria com dezenas de registros de bastidores, encontros e conquistas.
+            </p>
+          </div>
+          <motion.div whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }} style={{ position: 'relative', zIndex: 1 }}>
+            <Link to="/galeria"
+              style={{ background: 'var(--gold)', color: 'var(--navy)', padding: '15px 32px', borderRadius: 8, fontSize: 14, fontWeight: 700, textDecoration: 'none', boxShadow: '0 6px 30px var(--gold-glow)', display: 'inline-flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap' }}>
+              Ver galeria completa →
+            </Link>
+          </motion.div>
+        </div>
+      </motion.div>
     </section>
   );
 }
