@@ -4,9 +4,9 @@ import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 
 // Nav has 48px side padding (clamp caps at 3rem by 1200px) and content maxWidth:1200 centered inside it,
-// so the true empty gutter per side is 48 + max(0,(100vw-1296)/2). Width below keeps a 24px safety margin
-// from that gutter, scaling from ~96px at the 1440px show-breakpoint up to a 220px cap on very wide screens.
-const EDGE_ART_WIDTH = 'clamp(90px, calc(24px + (100vw - 1296px) / 2), 220px)';
+// so the true empty gutter per side is 48 + max(0,(100vw-1296)/2). Width below keeps a 16px safety margin
+// from that gutter, scaling from ~104px at the 1440px show-breakpoint up to a 380px cap (reached ~2008px wide).
+const EDGE_ART_WIDTH = 'clamp(90px, calc(32px + (100vw - 1296px) / 2), 380px)';
 
 const links = [
   { label: 'História', href: '#foto-historia' },
