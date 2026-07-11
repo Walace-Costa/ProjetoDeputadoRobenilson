@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
-import { ribbonPatternUri, navPatternUri } from './decorativePattern';
 
 const links = [
   { label: 'História', href: '#foto-historia' },
