@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 
 const links = [
@@ -15,6 +16,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width: 900px)');
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 50);
@@ -34,12 +37,12 @@ export default function Navbar() {
         transition: 'all 0.4s ease', padding: '0 clamp(1rem,4vw,3rem)',
       }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
-        <a href="#" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
           <img src="/logov2.png" alt="Robenilson Torres" style={{ height: 38, width: 'auto', display: 'block', flexShrink: 0 }} />
           <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: '#F5D77E' }}>
             Deputado Estadual · Bahia 2026
           </div>
-        </a>
+        </Link>
 
         {isMobile ? (
           <button onClick={() => setMenuOpen(v => !v)} aria-label="Abrir menu" aria-expanded={menuOpen}
@@ -51,15 +54,33 @@ export default function Navbar() {
         ) : (
           <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
             {links.map(l => (
-              <motion.a key={l.href} href={l.href} whileHover={{ color: '#D4A017' }}
-                style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 13 }}>
-                {l.label}
-              </motion.a>
+              isHome ? (
+                <motion.a key={l.href} href={l.href} whileHover={{ color: '#D4A017' }}
+                  style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 13 }}>
+                  {l.label}
+                </motion.a>
+              ) : (
+                <motion.div key={l.href} whileHover={{ color: '#D4A017' }}>
+                  <Link to={`/${l.href}`}
+                    style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 13 }}>
+                    {l.label}
+                  </Link>
+                </motion.div>
+              )
             ))}
-            <motion.a href="#contato" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-              style={{ background: 'var(--gold)', color: 'var(--navy)', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 20px var(--gold-glow)' }}>
-              #BoraPraALBA
-            </motion.a>
+            {isHome ? (
+              <motion.a href="#contato" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                style={{ background: 'var(--gold)', color: 'var(--navy)', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 20px var(--gold-glow)' }}>
+                #BoraPraALBA
+              </motion.a>
+            ) : (
+              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+                <Link to="/#contato"
+                  style={{ background: 'var(--gold)', color: 'var(--navy)', padding: '9px 22px', borderRadius: 7, fontSize: 13, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 20px var(--gold-glow)', display: 'inline-block' }}>
+                  #BoraPraALBA
+                </Link>
+              </motion.div>
+            )}
           </div>
         )}
       </div>
@@ -70,15 +91,29 @@ export default function Navbar() {
             style={{ overflow: 'hidden' }}>
             <div style={{ display: 'flex', flexDirection: 'column', padding: '8px clamp(1rem,4vw,3rem) 28px', gap: 2 }}>
               {links.map(l => (
-                <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
-                  style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
-                  {l.label}
-                </a>
+                isHome ? (
+                  <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
+                    style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                    {l.label}
+                  </a>
+                ) : (
+                  <Link key={l.href} to={`/${l.href}`} onClick={() => setMenuOpen(false)}
+                    style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                    {l.label}
+                  </Link>
+                )
               ))}
-              <a href="#contato" onClick={() => setMenuOpen(false)}
-                style={{ marginTop: 18, textAlign: 'center', background: 'var(--gold)', color: 'var(--navy)', padding: '13px 22px', borderRadius: 7, fontSize: 14, fontWeight: 700, textDecoration: 'none' }}>
-                #BoraPraALBA
-              </a>
+              {isHome ? (
+                <a href="#contato" onClick={() => setMenuOpen(false)}
+                  style={{ marginTop: 18, textAlign: 'center', background: 'var(--gold)', color: 'var(--navy)', padding: '13px 22px', borderRadius: 7, fontSize: 14, fontWeight: 700, textDecoration: 'none' }}>
+                  #BoraPraALBA
+                </a>
+              ) : (
+                <Link to="/#contato" onClick={() => setMenuOpen(false)}
+                  style={{ marginTop: 18, textAlign: 'center', background: 'var(--gold)', color: 'var(--navy)', padding: '13px 22px', borderRadius: 7, fontSize: 14, fontWeight: 700, textDecoration: 'none' }}>
+                  #BoraPraALBA
+                </Link>
+              )}
             </div>
           </motion.div>
         )}
