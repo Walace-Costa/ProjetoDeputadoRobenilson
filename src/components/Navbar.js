@@ -62,7 +62,7 @@ export default function Navbar() {
               ) : (
                 <motion.div key={l.href} whileHover={{ color: '#D4A017' }}>
                   <Link to={`/${l.href}`}
-                    style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 13 }}>
+                    style={{ color: '#fff', textDecoration: 'none', fontSize: 13 }}>
                     {l.label}
                   </Link>
                 </motion.div>
