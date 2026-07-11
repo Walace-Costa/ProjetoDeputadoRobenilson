@@ -63,17 +63,23 @@ const topicos = [
 
 function FotoComPlaceholder({ src, alt, accent, filename }) {
   const [erro, setErro] = useState(false);
-  if (erro) {
-    return (
-      <div style={{ width: '100%', height: '100%', minHeight: 260, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 12, background: `${accent}14`, border: `2px dashed ${accent}55`, borderRadius: 20 }}>
-        <span style={{ fontSize: 40, opacity: 0.45 }}>🖼️</span>
-        <span style={{ fontSize: 12, color: 'rgba(16,10,98,0.42)', textAlign: 'center', padding: '0 24px' }}>Foto: {filename}</span>
-      </div>
-    );
-  }
   return (
-    <img src={src} alt={alt} onError={() => setErro(true)}
-      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 20, display: 'block' }} />
+    <div style={{
+      width: '100%', height: '100%', minHeight: 260, display: 'flex', alignItems: 'center', justifyContent: 'center',
+      background: erro ? `${accent}14` : `${accent}0d`,
+      border: erro ? `2px dashed ${accent}55` : 'none',
+      borderRadius: 20,
+    }}>
+      {erro ? (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 12, padding: '0 24px' }}>
+          <span style={{ fontSize: 40, opacity: 0.45 }}>🖼️</span>
+          <span style={{ fontSize: 12, color: 'rgba(16,10,98,0.42)', textAlign: 'center' }}>Foto: {filename}</span>
+        </div>
+      ) : (
+        <img src={src} alt={alt} onError={() => setErro(true)}
+          style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+      )}
+    </div>
   );
 }
 
