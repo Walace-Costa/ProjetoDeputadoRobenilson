@@ -40,7 +40,7 @@ export default function Navbar() {
         position: 'absolute', inset: 0, zIndex: -1, pointerEvents: 'none',
         backgroundImage: 'url(/formas.png)',
         backgroundRepeat: 'repeat-x', backgroundPosition: '0 6px', backgroundSize: 'auto 56px',
-        opacity: 0.2, mixBlendMode: 'multiply',
+        opacity: 0.4,
         WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,0.4) 36%, rgba(0,0,0,0.4) 64%, rgba(0,0,0,1) 82%, rgba(0,0,0,1) 100%)',
         maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 18%, rgba(0,0,0,0.4) 36%, rgba(0,0,0,0.4) 64%, rgba(0,0,0,1) 82%, rgba(0,0,0,1) 100%)',
       }} />
