@@ -39,10 +39,10 @@ export default function Navbar() {
       }}>
       {showEdgeArt && (
         <>
-          <div aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: 90, overflow: 'hidden', pointerEvents: 'none' }}>
+          <div aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, left: 0, width: EDGE_ART_WIDTH, overflow: 'hidden', pointerEvents: 'none' }}>
             <img src="/formas.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'left center', display: 'block' }} />
           </div>
-          <div aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: 90, overflow: 'hidden', pointerEvents: 'none' }}>
+          <div aria-hidden="true" style={{ position: 'absolute', top: 0, bottom: 0, right: 0, width: EDGE_ART_WIDTH, overflow: 'hidden', pointerEvents: 'none' }}>
             <img src="/formas.png" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right center', display: 'block' }} />
           </div>
         </>
