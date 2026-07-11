@@ -28,7 +28,7 @@ export default function Navbar() {
   useEffect(() => { if (!isMobile) setMenuOpen(false); }, [isMobile]);
 
   return (
-    <motion.nav initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
+    <motion.nav className="navbar-texture" initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 200,
         background: scrolled ? '#132FA8' : '#0C2490',
