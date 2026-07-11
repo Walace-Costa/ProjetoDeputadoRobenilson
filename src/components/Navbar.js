@@ -17,6 +17,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width: 900px)');
+  const isTiny = useMediaQuery('(max-width: 420px)');
   const location = useLocation();
   const isHome = location.pathname === '/';
 
