@@ -93,7 +93,7 @@ export default function Navbar() {
               {links.map(l => (
                 isHome ? (
                   <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
-                    style={{ color: 'rgba(255,255,255,0.85)', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                    style={{ color: '#fff', textDecoration: 'none', fontSize: 15, padding: '13px 4px', borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
                     {l.label}
                   </a>
                 ) : (
