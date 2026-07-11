@@ -71,11 +71,6 @@ export default function Hero() {
             <div style={{ fontSize:11, letterSpacing:'0.08em', marginBottom:4, color:'#E8899B', fontWeight:600 }}>OAB/BA · Presidente ACTEBA</div>
             <div style={{ color:'rgba(255,255,255,0.5)', fontSize:11, marginBottom:20 }}>Itabuna, Bahia</div>
 
-            <div style={{ background:'rgba(212,160,23,0.15)', border:'1px solid rgba(212,160,23,0.3)', borderRadius:10, padding:'14px 0', marginBottom:20 }}>
-              <div style={{ color:'#F0CA6E', fontSize:10, letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:8 }}>Número nas urnas</div>
-              <div style={{ fontFamily:'var(--serif)', fontSize:44, fontWeight:700, letterSpacing:8, background:'linear-gradient(90deg,var(--red),var(--gold),var(--red))', backgroundSize:'200% auto', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', animation:'gradientShift 3s ease infinite' }}>XXXX</div>
-            </div>
-
             <div style={{ display:'inline-flex', alignItems:'center', gap:6, background:'rgba(219,0,44,0.12)', border:'1px solid rgba(219,0,44,0.3)', borderRadius:999, padding:'6px 14px' }}>
               <span style={{ color:'var(--red)', fontSize:12, fontWeight:700 }}>#BoraPraALBA</span>
             </div>
