@@ -19,8 +19,12 @@ const mencoes = [
   { veiculo:'Cacau News', data:'2025', titulo:'Robenilson Torres em destaque na defesa dos direitos da criança no sul da Bahia', resumo:'Advogado e presidente da ACTEBA é reconhecido como referência regional na proteção integral da infância e adolescência no sul baiano.', url:'https://cacaunews.com/?p=6876', img:null, tag:'Sul da Bahia', tagColor:'#db002c' },
 ];
 
-const row1 = [...mencoes, ...mencoes];
-const row2 = [...[...mencoes].reverse(), ...[...mencoes].reverse()];
+const metade = Math.ceil(mencoes.length / 2);
+const metadeMencoes1 = mencoes.slice(0, metade);
+const metadeMencoes2 = mencoes.slice(metade);
+
+const row1 = [...metadeMencoes1, ...metadeMencoes1];
+const row2 = [...metadeMencoes2, ...metadeMencoes2];
 
 function Card({ m, style }) {
   return (
