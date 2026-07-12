@@ -51,6 +51,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/galeria" element={<Galeria />} />
+        <Route path="/biografia" element={<Biografia />} />
       </Routes>
     </BrowserRouter>
   );
