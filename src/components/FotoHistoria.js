@@ -102,7 +102,7 @@ function HistoriaMobile() {
     <div style={{ maxWidth: 640, margin: '0 auto', padding: '0 clamp(1rem,5vw,2rem)' }}>
       {topicos.map((t, i) => (
         <div key={t.id} style={{ borderBottom: i < topicos.length - 1 ? '1px solid rgba(16,10,98,0.08)' : 'none' }}>
-          <div style={{ height: 240, borderRadius: 20, overflow: 'hidden', marginTop: 32 }}>
+          <div style={{ height: 160, borderRadius: 20, overflow: 'hidden', marginTop: 24 }}>
             <FotoComPlaceholder src={t.foto} alt={t.titulo} accent={t.accent} filename={t.foto} />
           </div>
           <TopicBlock topico={t} index={i} isMobile={true} />
