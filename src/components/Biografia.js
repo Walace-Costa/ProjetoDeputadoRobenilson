@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { topicos } from '../data/biografia';
+import { topicosCompletos } from '../data/biografia';
+
+// TEMPORÁRIO: link direto para WhatsApp pessoal. Substituir por link de vaquinha virtual quando disponível.
+const LINK_APOIO = "https://wa.me/5573991985050?text=Ol%C3%A1%2C%20quero%20apoiar%20a%20campanha%20do%20Robenilson%20Torres%21";
 
 export default function Biografia() {
   return (
