@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import Particles from './Particles';
 
+const LINK_GRUPO_WHATSAPP = "https://chat.whatsapp.com/GUfcNuF8IHBEvKTGyXOV7C?s=sw&p=a&ilr=0&amv=0";
+
 export default function Hero() {
   const [offsetY, setOffsetY] = useState(0);
   const isMobile = useMediaQuery('(max-width: 860px)');
