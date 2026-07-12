@@ -23,7 +23,7 @@ export default function Politica() {
               <span style={{ color: 'var(--red)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Plataforma política</span>
             </div>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.2, marginBottom: 20 }}>Propostas com raiz na realidade</h2>
-            <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 15, lineHeight: 1.8, marginBottom: 32 }}>Não são promessas de palanque. São projetos baseados em experiência real com políticas públicas e defesa dos direitos de crianças.</p>
+            <p style={{ color: 'rgba(16,10,98,0.6)', fontSize: 15, lineHeight: 1.8, marginBottom: 32 }}>Não são promessas de palanque. São projetos baseados em experiência real com políticas públicas e defesa dos direitos de crianças e adolescentes.</p>
             {/* Avatar decorativo */}
             <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
               <img src="/avatar-casual.jpg" alt="" style={{ width: 120, height: 150, objectFit: 'cover', objectPosition: 'top', borderRadius: 16, border: '2px solid rgba(219,0,44,0.3)', boxShadow: '0 8px 32px rgba(219,0,44,0.15)', display: 'block', marginBottom: 24 }} />
