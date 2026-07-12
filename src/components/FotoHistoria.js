@@ -56,7 +56,7 @@ function TopicBlock({ topico, index, onActive, isMobile }) {
 
 function ColunaFoto({ topico, active }) {
   return (
-    <div style={{ position: 'sticky', top: 100, height: 'calc(100vh - 140px)', display: 'flex', flexDirection: 'column', gap: 18, padding: '20px 0' }}>
+    <div style={{ position: 'sticky', top: 100, height: 500, display: 'flex', flexDirection: 'column', gap: 18, padding: '20px 0' }}>
       <div style={{ position: 'relative', flex: 1, borderRadius: 20, overflow: 'hidden', boxShadow: '0 24px 60px rgba(16,10,98,0.14)' }}>
         <AnimatePresence mode="wait">
           <motion.div key={topico.id}
