@@ -11,6 +11,7 @@ import Politica from './components/Politica';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
 import Galeria from './components/Galeria';
+import Biografia from './components/Biografia';
 
 function ScrollToHash() {
   const location = useLocation();
