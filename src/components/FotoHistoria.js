@@ -28,7 +28,7 @@ function FotoComPlaceholder({ src, alt, accent, filename }) {
 }
 
 function TopicBlock({ topico, index, onActive, isMobile }) {
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { ref, inView } = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (inView && onActive) onActive(index);
@@ -36,9 +36,9 @@ function TopicBlock({ topico, index, onActive, isMobile }) {
 
   return (
     <div ref={ref} style={{
-      minHeight: isMobile ? undefined : '100vh',
+      minHeight: isMobile ? undefined : '65vh',
       display: 'flex', flexDirection: 'column', justifyContent: 'center',
-      padding: isMobile ? '36px 0 56px' : 'clamp(2rem,6vw,4rem) clamp(1rem,3vw,2.5rem)',
+      padding: isMobile ? '22px 0 34px' : 'clamp(1.2rem,3.5vw,2.2rem) clamp(1rem,3vw,2.5rem)',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20 }}>
         <span style={{ fontSize: 30 }}>{topico.emoji}</span>
