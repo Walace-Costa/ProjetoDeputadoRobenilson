@@ -47,8 +47,8 @@ function TopicBlock({ topico, index, onActive, isMobile }) {
       <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.5rem,2.6vw,2.1rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.25, marginBottom: 18 }}>
         {topico.titulo}
       </h3>
-      {topico.texto.map((p, pi) => (
-        <p key={pi} style={{ color: 'rgba(16,10,98,0.68)', fontSize: 15, lineHeight: 1.8, marginBottom: 16 }}>{p}</p>
+      {topico.resumo.map((p, pi) => (
+        <p key={pi} style={{ color: 'rgba(16,10,98,0.68)', fontSize: 15, lineHeight: 1.8, marginBottom: 16, textAlign: 'justify', hyphens: 'auto', WebkitHyphens: 'auto' }}>{p}</p>
       ))}
     </div>
   );
