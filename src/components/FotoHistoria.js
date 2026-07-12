@@ -128,6 +128,14 @@ export default function FotoHistoria() {
       </div>
       {isMobile ? <HistoriaMobile /> : <HistoriaDesktop />}
 
+      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.5 }}
+        style={{ textAlign: 'center', padding: isMobile ? '8px clamp(1rem,5vw,2rem) 40px' : '8px clamp(1rem,4vw,3rem) 56px' }}>
+        <Link to="/biografia"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--navy)', border: '1px solid rgba(16,10,98,0.25)', borderRadius: 8, padding: '13px 28px', fontSize: 14, fontWeight: 700, textDecoration: 'none', background: 'rgba(16,10,98,0.04)' }}>
+          Ler biografia completa →
+        </Link>
+      </motion.div>
+
       <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.6 }}
         style={{ maxWidth: 1200, margin: '0 auto', padding: isMobile ? '0 clamp(1rem,5vw,2rem) 64px' : '0 clamp(1rem,4vw,3rem) 88px' }}>
         <div style={{ background: 'linear-gradient(120deg, var(--navy), #241E76)', borderRadius: 24, padding: isMobile ? '36px 24px' : '48px 56px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap', boxShadow: '0 24px 60px rgba(16,10,98,0.25)', position: 'relative', overflow: 'hidden' }}>
