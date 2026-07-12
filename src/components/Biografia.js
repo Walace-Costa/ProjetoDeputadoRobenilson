@@ -24,8 +24,8 @@ export default function Biografia() {
             Biografia completa
           </h1>
 
-          {topicos.map((t, i) => (
-            <div key={t.id} style={{ marginBottom: i < topicos.length - 1 ? 48 : 0 }}>
+          {topicosCompletos.map((t, i) => (
+            <div key={t.id} style={{ marginBottom: 48 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
                 <span style={{ fontSize: 26 }}>{t.emoji}</span>
                 <div style={{ height: 2, width: 40, background: t.accent, borderRadius: 1 }} />
@@ -40,6 +40,22 @@ export default function Biografia() {
               ))}
             </div>
           ))}
+
+          <div style={{ background: 'linear-gradient(120deg, var(--navy), #241E76)', borderRadius: 24, padding: '44px 36px', textAlign: 'center', boxShadow: '0 24px 60px rgba(16,10,98,0.25)', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'absolute', top: '-30%', right: '-8%', width: 260, height: 260, borderRadius: '50%', background: 'radial-gradient(circle,rgba(255,222,0,0.15) 0%,transparent 65%)', pointerEvents: 'none' }} />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.3rem,2.6vw,1.8rem)', fontWeight: 700, color: '#fff', marginBottom: 10 }}>
+                Apoie essa campanha
+              </h3>
+              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, marginBottom: 26 }}>
+                Sua contribuição ajuda a levar essa causa até a ALBA.
+              </p>
+              <a href={LINK_APOIO} target="_blank" rel="noopener noreferrer"
+                style={{ background: 'var(--gold)', color: 'var(--navy)', padding: '15px 32px', borderRadius: 8, fontSize: 14, fontWeight: 700, textDecoration: 'none', boxShadow: '0 6px 30px var(--gold-glow)', display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                Quero apoiar
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
