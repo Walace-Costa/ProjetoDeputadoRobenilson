@@ -84,21 +84,81 @@ function InfiniteRow({ items, toLeft = false, speed = 40 }) {
   const cardW = 316;
   const totalW = (items.length / 2) * cardW;
   const edgeW = 100;
+  const trackRef = useRef(null);
+  const offsetRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragState = useRef({ dragging:false, startX:0, startOffset:0, moved:false });
+
+  useEffect(() => {
+    const pxPerSec = totalW / speed;
+    const dir = toLeft ? -1 : 1;
+    let raf;
+    let last = performance.now();
+    const tick = (now) => {
+      const dt = (now - last) / 1000;
+      last = now;
+      if (!isPaused && !dragState.current.dragging) {
+        offsetRef.current += dir * pxPerSec * dt;
+        if (offsetRef.current <= -totalW) offsetRef.current += totalW;
+        if (offsetRef.current > 0) offsetRef.current -= totalW;
+      }
+      if (trackRef.current) trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [isPaused, totalW, speed, toLeft]);
+
+  const wrapOffset = (val) => {
+    let next = val;
+    while (next <= -totalW) next += totalW;
+    while (next > 0) next -= totalW;
+    return next;
+  };
+
+  const onPointerDown = (e) => {
+    dragState.current = { dragging:true, startX:e.clientX, startOffset:offsetRef.current, moved:false };
+    setIsDragging(true);
+    setIsPaused(true);
+    e.currentTarget.setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e) => {
+    if (!dragState.current.dragging) return;
+    const dx = e.clientX - dragState.current.startX;
+    if (Math.abs(dx) > 4) dragState.current.moved = true;
+    offsetRef.current = wrapOffset(dragState.current.startOffset + dx);
+  };
+  const endDrag = () => {
+    if (!dragState.current.dragging) return;
+    dragState.current.dragging = false;
+    setIsDragging(false);
+    setIsPaused(false);
+  };
+  const onClickCapture = (e) => {
+    if (dragState.current.moved) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
 
   return (
     <div style={{ overflow:'hidden', position:'relative' }}
       onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}>
+      onMouseLeave={() => { if (!dragState.current.dragging) setIsPaused(false); }}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={endDrag}
+      onPointerCancel={endDrag}
+      onClickCapture={onClickCapture}>
       <div style={{ position:'absolute', left:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
       <div style={{ position:'absolute', right:0, top:0, bottom:0, width:edgeW, background:'linear-gradient(-90deg,#1B316E,transparent)', zIndex:2, pointerEvents:'none' }} />
       <div
+        ref={trackRef}
+        onDragStart={(e) => e.preventDefault()}
         style={{
           display:'flex', gap:16, width:'max-content', paddingBottom:4,
-          '--mencoesScrollDist': `-${totalW}px`,
-          animationName:'mencoesScroll', animationDuration:`${speed}s`, animationTimingFunction:'linear',
-          animationIterationCount:'infinite', animationDirection: toLeft ? 'normal' : 'reverse',
-          animationPlayState: isPaused ? 'paused' : 'running',
+          cursor: isDragging ? 'grabbing' : 'grab', userSelect:'none', touchAction:'pan-y',
         }}>
         {items.map((m,i) => <Card key={i} m={m} />)}
       </div>
