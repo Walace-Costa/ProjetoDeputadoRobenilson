@@ -278,7 +278,6 @@ export default function Mencoes() {
 
       <style>{`
         @keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(23,105,57,0.35)}50%{box-shadow:0 0 0 9px rgba(23,105,57,0)}}
-        @keyframes mencoesScroll{from{transform:translateX(0)}to{transform:translateX(var(--mencoesScrollDist))}}
       `}</style>
     </section>
   );
