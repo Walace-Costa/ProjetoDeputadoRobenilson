@@ -118,19 +118,27 @@ function InfiniteRow({ items, toLeft = false, speed = 40 }) {
   };
 
   const onPointerDown = (e) => {
-    dragState.current = { dragging:true, startX:e.clientX, startOffset:offsetRef.current, moved:false };
+    dragState.current = { dragging:true, startX:e.clientX, startOffset:offsetRef.current, moved:false, pointerId:e.pointerId, captured:false };
     setIsDragging(true);
     setIsPaused(true);
-    e.currentTarget.setPointerCapture(e.pointerId);
   };
   const onPointerMove = (e) => {
     if (!dragState.current.dragging) return;
     const dx = e.clientX - dragState.current.startX;
-    if (Math.abs(dx) > 4) dragState.current.moved = true;
-    offsetRef.current = wrapOffset(dragState.current.startOffset + dx);
+    if (Math.abs(dx) > 4) {
+      if (!dragState.current.moved) {
+        dragState.current.moved = true;
+        dragState.current.captured = true;
+        e.currentTarget.setPointerCapture(dragState.current.pointerId);
+      }
+      offsetRef.current = wrapOffset(dragState.current.startOffset + dx);
+    }
   };
-  const endDrag = () => {
+  const endDrag = (e) => {
     if (!dragState.current.dragging) return;
+    if (dragState.current.captured && e?.currentTarget?.releasePointerCapture) {
+      e.currentTarget.releasePointerCapture(dragState.current.pointerId);
+    }
     dragState.current.dragging = false;
     setIsDragging(false);
     setIsPaused(false);
