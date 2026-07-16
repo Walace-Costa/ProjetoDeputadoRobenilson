@@ -37,7 +37,7 @@ function Card({ m, style }) {
         <div style={{ height:3, background:`linear-gradient(90deg,${m.tagColor},${m.tagColor}55,transparent)` }} />
         {m.img ? (
           <div style={{ height:120, overflow:'hidden', background:'var(--cream)' }}>
-            <img src={m.img} alt="" style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.9 }} onError={e=>{e.target.parentNode.style.display='none';}} />
+            <img src={m.img} alt="" draggable={false} style={{ width:'100%', height:'100%', objectFit:'cover', opacity:0.9 }} onError={e=>{e.target.parentNode.style.display='none';}} />
           </div>
         ) : (
           <div style={{ height:64, background:`linear-gradient(135deg,${m.tagColor}14,transparent)`, display:'flex', alignItems:'center', justifyContent:'center' }}>
