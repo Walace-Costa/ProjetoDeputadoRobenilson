@@ -28,7 +28,6 @@ export default function Biografia() {
             <div key={t.id} style={{ marginBottom: 48 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
                 <span style={{ fontSize: 26 }}>{t.emoji}</span>
-                <div style={{ height: 2, width: 40, background: t.accent, borderRadius: 1 }} />
               </div>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.3rem,2.4vw,1.7rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.3, marginBottom: 16 }}>
                 {t.titulo}
