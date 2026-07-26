@@ -42,7 +42,6 @@ function TopicBlock({ topico, index, onActive, isMobile }) {
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20 }}>
         <span style={{ fontSize: 30 }}>{topico.emoji}</span>
-        <div style={{ height: 2, width: 48, background: topico.accent, borderRadius: 1 }} />
       </div>
       <h3 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.5rem,2.6vw,2.1rem)', fontWeight: 700, color: 'var(--navy)', lineHeight: 1.25, marginBottom: 18 }}>
         {topico.titulo}
