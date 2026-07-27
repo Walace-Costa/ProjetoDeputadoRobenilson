@@ -33,7 +33,7 @@ export const topicos = [
       'Em 2003, ingressou na UESC pelo PRUNE (Pré-Universitário para Negros e Excluídos) e formou-se em Direito em 2018. Foi presidente do Centro Acadêmico João Mangabeira (CAJAM), atuou no DCE e representou os estudantes em conselhos da universidade e da cidade. É especialista em Direito Público e em Proteção Integral de Crianças e Adolescentes, com mais de dez cursos pela ENAP.',
     ],
     completo: [
-      'Em 2003, Robenilson viveu um marco em sua caminhada ao fazer parte do PRUNE (Pré-Universitário para Negros e Excluídos), programa que lhe deu as ferramentas para ser aprovado no concorrido vestibular de Direito da Universidade Estadual de Santa Cruz (UESC), formando-se bacharel em 2018.',
+      'Em 2003, Robenilson viveu um marco em sua caminhada ao fazer parte do PRUNE (Pré-Universitário para Negros e Excluídos), programa que lhe deu as ferramentas para ser aprovado no concorrido vestibular, primeiro no curso de Economia, e posteriormente, no Curso de Direito da Universidade Estadual de Santa Cruz (UESC), formando-se bacharel em 2018.',
       'Na UESC, sua liderança floresceu: foi eleito Presidente do Centro Acadêmico João Mangabeira (CAJAM), atuou no Diretório Central dos Estudantes como Diretor de Extensão e Diretor de Combate ao Racismo, e representou os estudantes no Conselho Superior da UESC e no Conselho de Transportes de Itabuna. É especialista em Direito Público, Contratos e Licitações e em Proteção Integral de Crianças e Adolescentes, além de mais de dez cursos pela ENAP em Ouvidoria, Gestão Pública, LGPD, Controle Social e Inteligência Artificial no serviço público.',
     ],
   },
@@ -96,7 +96,7 @@ export const topicosCompletos = [
     id: 'uesc', emoji: '🎓',
     titulo: 'Inclusão, Superação e Excelência Acadêmica na UESC',
     completo: [
-      'Em 2003, Robenilson viveu um marco em sua caminhada ao fazer parte do PRUNE (Pré-Universitário para Negros e Excluídos), programa que lhe deu as ferramentas para ser aprovado no concorrido vestibular de Direito da Universidade Estadual de Santa Cruz (UESC), formando-se bacharel em 2018.',
+      'Em 2003, Robenilson viveu um marco em sua caminhada ao fazer parte do PRUNE (Pré-Universitário para Negros e Excluídos), programa que lhe deu as ferramentas para ser aprovado no concorrido vestibular, primeiro no curso de Economia, e posteriormente, no Curso de Direito da Universidade Estadual de Santa Cruz (UESC), formando-se bacharel em 2018.',
       'Na UESC, sua liderança floresceu: foi eleito Presidente do Centro Acadêmico João Mangabeira (CAJAM), atuou no Diretório Central dos Estudantes como Diretor de Extensão e Diretor de Combate ao Racismo, e representou os estudantes no Conselho Superior da UESC e no Conselho de Transportes de Itabuna. É especialista em Direito Público, Contratos e Licitações e em Proteção Integral de Crianças e Adolescentes, além de mais de dez cursos pela ENAP em Ouvidoria, Gestão Pública, LGPD, Controle Social e Inteligência Artificial no serviço público.',
     ],
   },
