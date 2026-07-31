@@ -41,6 +41,7 @@ function Home() {
       <Politica />
       <Contato />
       <Footer />
+      <WhatsappFloat />
     </div>
   );
 }
