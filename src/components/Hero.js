@@ -62,7 +62,7 @@ export default function Hero() {
         <motion.div initial={{ opacity:0, x:50, scale:0.95 }} animate={{ opacity:1, x:0, scale:1 }} transition={{ duration:0.9, delay:0.5 }} style={{ display:'flex', justifyContent:'center' }}>
           <motion.div animate={{ y:[0,-12,0] }} transition={{ duration:5, repeat:Infinity, ease:'easeInOut' }}
             style={{ border:'1px solid rgba(15,27,76,0.1)', borderRadius:24, width:'100%', maxWidth:370, aspectRatio:'3/4', boxShadow:'0 20px 60px rgba(15,27,76,0.25), 0 4px 16px rgba(15,27,76,0.15)', position:'relative', overflow:'hidden' }}>
-            <img src="/newProfile3.jpeg" alt="Robenilson Torres" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
+            <img src="/novaFotoHero.jpeg" alt="Robenilson Torres" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'top center' }} />
 
             <div style={{ position:'absolute', left:0, right:0, bottom:0, padding:'60px 24px 22px', background:'linear-gradient(to top, rgba(10,8,40,0.88) 0%, rgba(10,8,40,0.55) 55%, transparent 100%)' }}>
               <div style={{ color:'#FFFFFF', fontSize:19, fontWeight:700, marginBottom:12, fontFamily:'var(--serif)', textShadow:'0 2px 8px rgba(0,0,0,0.4)' }}>Robenilson Torres</div>
