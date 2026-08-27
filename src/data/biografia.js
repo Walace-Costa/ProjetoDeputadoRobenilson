@@ -66,10 +66,10 @@ export const topicos = [
     titulo: '#BoraPraALBA — o próximo passo',
     foto: '/historia-6-candidatura.jpg',
     resumo: [
-      'Essa trajetória de vivência popular, educação, gestão pública e defesa da infância converge agora em um novo propósito: Robenilson Torres é pré-candidato a Deputado Estadual pelo PDT, levando décadas de experiência real para dentro do parlamento baiano.',
+      'Essa trajetória de vivência popular, educação, gestão pública e defesa da infância converge agora em um novo propósito: Robenilson Torres é candidato a Deputado Estadual pelo PDT, levando décadas de experiência real para dentro do parlamento baiano.',
     ],
     completo: [
-      'Toda essa trajetória de vivência popular, educação, gestão pública e defesa incansável da infância converge agora em um novo propósito: Robenilson Torres é pré-candidato a Deputado Estadual pelo Partido Democrático Trabalhista (PDT), levando décadas de experiência real para dentro do parlamento baiano.',
+      'Toda essa trajetória de vivência popular, educação, gestão pública e defesa incansável da infância converge agora em um novo propósito: Robenilson Torres é candidato a Deputado Estadual pelo Partido Democrático Trabalhista (PDT), levando décadas de experiência real para dentro do parlamento baiano.',
     ],
   },
 ].map((t, i) => ({ ...t, accent: ACCENTS[i % ACCENTS.length] }));
@@ -127,7 +127,7 @@ export const topicosCompletos = [
     id: 'candidatura', emoji: '🏛️',
     titulo: '#BoraPraALBA',
     completo: [
-      'Toda essa trajetória de vivência popular, educação, gestão pública e defesa incansável da infância converge agora em um novo propósito: Robenilson é Pré-candidato a Deputado Estadual pelo Partido Democrático Trabalhista - PDT, levando décadas de experiência real para dentro do parlamento baiano.',
+      'Toda essa trajetória de vivência popular, educação, gestão pública e defesa incansável da infância converge agora em um novo propósito: Robenilson é candidato a Deputado Estadual pelo Partido Democrático Trabalhista - PDT, levando décadas de experiência real para dentro do parlamento baiano.',
     ],
   },
 ].map((t, i) => ({ ...t, accent: ACCENTS[i % ACCENTS.length] }));

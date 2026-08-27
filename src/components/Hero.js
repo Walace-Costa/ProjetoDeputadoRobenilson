@@ -27,7 +27,7 @@ export default function Hero() {
           <motion.div initial={{ opacity:0, x:-30 }} animate={{ opacity:1, x:0 }} transition={{ duration:0.6, delay:0.2 }}
             style={{ display:'inline-flex', alignItems:'center', gap:8, border:'1px solid rgba(219,0,44,0.35)', borderRadius:999, padding:'5px 14px', marginBottom:28, background:'rgba(219,0,44,0.08)' }}>
             <div style={{ width:7, height:7, borderRadius:'50%', background:'var(--red)', animation:'pulseRed 2s infinite' }} />
-            <span style={{ color:'var(--red)', fontSize:11, fontWeight:600, letterSpacing:'0.1em', textTransform:'uppercase' }}>Pré-candidato a Deputado Estadual · Bahia 2026</span>
+            <span style={{ color:'var(--red)', fontSize:11, fontWeight:600, letterSpacing:'0.1em', textTransform:'uppercase' }}>Candidato a Deputado Estadual · Bahia 2026</span>
           </motion.div>
 
           <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.8, delay:0.4 }} style={{ position:'relative', marginBottom:24 }}>

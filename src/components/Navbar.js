@@ -57,8 +57,29 @@ export default function Navbar() {
       <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
           <img src="/logo_colorido_robenilson_deputado_estadual.png" alt="Robenilson Torres" style={{ height: 72, width: 'auto', display: 'block', flexShrink: 0 }} />
-          <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: '#F5D77E' }}>
-            Deputado Estadual · Bahia 2026
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+            <div style={{ fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', fontWeight: 600, color: '#F5D77E' }}>
+              Deputado Estadual · Bahia 2026
+            </div>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: 78,
+              height: 26,
+              padding: '0 10px',
+              borderRadius: 999,
+              background: 'rgba(255, 222, 0, 0.12)',
+              border: '1px solid rgba(245, 215, 126, 0.45)',
+              color: '#F5D77E',
+              fontSize: 11,
+              fontWeight: 800,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              boxShadow: '0 0 0 1px rgba(255, 222, 0, 0.12)'
+            }}>
+              12.227
+            </div>
           </div>
         </Link>
 
